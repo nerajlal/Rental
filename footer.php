@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
+                    <ul class="flex flex-row flex-wrap gap-x-4 gap-y-2 md:flex-col md:space-y-2 md:flex-nowrap md:gap-0">
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Wedding Decorations</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Corporate Events</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Party Planning</a></li>
@@ -46,8 +46,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 flex justify-between items-center text-gray-400">
-                <p>&copy; 2024 <?php echo $siteConfig['business']['name']; ?>. All rights reserved.</p>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row md:justify-between text-center md:text-left text-gray-400">
+                <p class="mb-2 md:mb-0">&copy; 2024 <?php echo $siteConfig['business']['name']; ?>. All rights reserved.</p>
                 <p>Developed by <a href="https://metora.in/" target="_blank" class="text-orange-400 hover:text-orange-500">Metora</a></p>
             </div>
         </div>
