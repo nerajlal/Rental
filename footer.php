@@ -53,6 +53,7 @@
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2024 <?php echo $siteConfig['business']['name']; ?>. All rights reserved.</p>
+                <p class="mt-2">Developed by <a href="https://metora.in/" target="_blank" class="text-orange-400 hover:text-orange-500">Metora</a></p>
             </div>
         </div>
     </footer>
