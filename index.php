@@ -1,46 +1,8 @@
-<?php include 'head.php'; ?>
-
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-xl font-bold text-gray-800" id="nav-brand">Premium Ornament Rentals</h1>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-                
-                <!-- Desktop navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.php" class="nav-link active px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="products.php" class="nav-link px-3 py-2 text-sm font-medium">Products</a>
-                        <a href="about.php" class="nav-link px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mobile navigation -->
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.php" class="nav-link-mobile active block px-3 py-2 text-base font-medium">Home</a>
-                    <a href="products.php" class="nav-link-mobile block px-3 py-2 text-base font-medium">Products</a>
-                    <a href="about.php" class="nav-link-mobile block px-3 py-2 text-base font-medium">About</a>
-                    <a href="#" class="block px-3 py-2 text-base font-medium text-orange-600">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<?php
+$page = 'home';
+include_once 'config.php';
+include 'head.php';
+?>
 
     <!-- Main Content -->
     <main class="pt-16" id="main-content">
@@ -130,60 +92,57 @@
             </section>
 
             <!-- Contact Section -->
-            <section class="py-16 px-4 bg-gray-50">
+            <section class="py-20 px-4 bg-gradient-to-r from-orange-50 to-red-100">
                 <div class="max-w-4xl mx-auto">
-                    <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Get In Touch</h3>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="space-y-6">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
+                    <h3 class="text-4xl font-bold text-center mb-4 text-gray-800">Get In Touch</h3>
+                    <p class="text-lg text-center text-gray-600 mb-12">We'd love to hear from you. Send us a message and we'll get back to you shortly.</p>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold">Phone</h4>
-                                    <p class="text-gray-600" id="contact-phone">+1 (555) 123-4567</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Email</h4>
-                                    <p class="text-gray-600" id="contact-email">info@ornamentrentals.com</p>
+                                    <h4 class="text-xl font-semibold">Phone</h4>
+                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['phone']; ?></p>
+                                    <a href="tel:<?php echo $siteConfig['business']['phone']; ?>" class="text-orange-600 hover:text-orange-700 font-medium">Call us</a>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold">Address</h4>
-                                    <p class="text-gray-600" id="contact-address">123 Event Street<br>City, State 12345</p>
+                                    <h4 class="text-xl font-semibold">Email</h4>
+                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['email']; ?></p>
+                                    <a href="mailto:<?php echo $siteConfig['business']['email']; ?>" class="text-orange-600 hover:text-orange-700 font-medium">Email us</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Address</h4>
+                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['address']; ?></p>
+                                    <a href="#" class="text-orange-600 hover:text-orange-700 font-medium">Get directions</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h4 class="text-xl font-semibold mb-4">Send us a message</h4>
-                            <form class="space-y-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h4 class="text-2xl font-semibold mb-6">Send us a message</h4>
+                            <form class="space-y-6">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Event Type</label>
-                                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300">
                                         <option>Wedding</option>
                                         <option>Corporate Event</option>
                                         <option>Birthday Party</option>
@@ -193,9 +152,9 @@
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                    <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300"></textarea>
                                 </div>
-                                <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-md font-medium transition duration-300">Send Message</button>
+                                <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-6 rounded-md font-semibold text-lg transition duration-300 transform hover:scale-105">Send Message</button>
                             </form>
                         </div>
                     </div>

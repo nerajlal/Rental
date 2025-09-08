@@ -10,11 +10,4 @@ const siteConfig = {
         light: '#f9fafb', // gray-50
         dark: '#111827' // gray-900
     },
-    business: {
-        name: 'Premium Ornament Rentals',
-        tagline: 'Transform Your Events with Elegant Decorations',
-        phone: '+1 (555) 123-4567',
-        email: 'info@ornamentrentals.com',
-        address: '123 Event Street, City, State 12345'
-    }
 };

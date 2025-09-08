@@ -84,21 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Apply configuration
     function applyConfiguration() {
-        // Update brand names
-        document.getElementById('nav-brand').textContent = siteConfig.business.name;
-        document.getElementById('footer-brand').textContent = siteConfig.business.name;
-
-        // Update hero title
-        document.getElementById('hero-title').textContent = siteConfig.business.tagline;
-
-        // Update contact information
-        document.getElementById('contact-phone').textContent = siteConfig.business.phone;
-        document.getElementById('contact-email').textContent = siteConfig.business.email;
-        document.getElementById('contact-address').innerHTML = siteConfig.business.address.replace(', ', '<br>');
-
-        document.getElementById('footer-phone').textContent = siteConfig.business.phone;
-        document.getElementById('footer-email').textContent = siteConfig.business.email;
-        document.getElementById('footer-address').innerHTML = siteConfig.business.address.replace(', ', '<br>');
+        // This function is now empty as the configuration is applied server-side by PHP.
     }
 
     // Apply custom styling based on configuration

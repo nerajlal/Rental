@@ -1,9 +1,10 @@
+<?php include_once 'config.php'; ?>
 <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4" id="footer-brand">Premium Ornament Rentals</h3>
+                    <h3 class="text-xl font-bold mb-4" id="footer-brand"><?php echo $siteConfig['business']['name']; ?></h3>
                     <p class="text-gray-400 mb-4">Creating unforgettable moments with premium decorative rentals for all your special occasions.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition duration-300">
@@ -44,14 +45,14 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li id="footer-phone">+1 (555) 123-4567</li>
-                        <li id="footer-email">info@ornamentrentals.com</li>
-                        <li id="footer-address">123 Event Street<br>City, State 12345</li>
+                        <li id="footer-phone"><?php echo $siteConfig['business']['phone']; ?></li>
+                        <li id="footer-email"><?php echo $siteConfig['business']['email']; ?></li>
+                        <li id="footer-address"><?php echo $siteConfig['business']['address']; ?></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Premium Ornament Rentals. All rights reserved.</p>
+                <p>&copy; 2024 <?php echo $siteConfig['business']['name']; ?>. All rights reserved.</p>
             </div>
         </div>
     </footer>
