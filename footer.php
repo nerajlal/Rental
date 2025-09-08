@@ -2,8 +2,8 @@
 <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
                     <h3 class="text-xl font-bold mb-4" id="footer-brand"><?php echo $siteConfig['business']['name']; ?></h3>
                     <p class="text-gray-400 mb-4">Creating unforgettable moments with premium decorative rentals for all your special occasions.</p>
                     <div class="flex space-x-4">
@@ -36,7 +36,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Holiday Decor</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li>Phone: <a href="tel:<?php echo $siteConfig['business']['phone']; ?>" class="hover:text-white"><?php echo $siteConfig['business']['phone']; ?></a></li>
