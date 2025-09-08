@@ -33,10 +33,10 @@
         </nav>
 
         <div class="absolute bottom-6 left-6 right-6">
-            <div class="bg-gradient-to-r from-orange-400 to-pink-400 text-white p-4 rounded-lg">
+            <div class="bg-gradient-to-r from-primary to-accent text-white p-4 rounded-lg">
                 <h3 class="font-semibold text-sm">Free Plan</h3>
                 <p class="text-xs opacity-90 mt-1">Upgrade to unlock more features</p>
-                <button id="upgrade-btn" class="mt-2 bg-white text-orange-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-100 transition duration-300">
+                <button id="upgrade-btn" class="mt-2 bg-white text-primary px-3 py-1 rounded text-xs font-medium hover:bg-gray-100 transition duration-300">
                     Upgrade Now
                 </button>
             </div>
