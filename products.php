@@ -25,9 +25,7 @@ include 'head.php';
                     <!-- Product 1 -->
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="wedding">
                         <div class="h-48 bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                            </svg>
+                            <i class="fas fa-heart text-5xl text-pink-600"></i>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Elegant Wedding Centerpieces</h3>
@@ -42,9 +40,7 @@ include 'head.php';
                     <!-- Product 2 -->
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="corporate">
                         <div class="h-48 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
+                            <i class="fas fa-lightbulb text-5xl text-blue-600"></i>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Professional Event Lighting</h3>
@@ -59,9 +55,7 @@ include 'head.php';
                     <!-- Product 3 -->
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="party">
                         <div class="h-48 bg-gradient-to-br from-purple-100 to-pink-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
+                            <i class="fas fa-birthday-cake text-5xl text-purple-600"></i>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Party Balloon Arrangements</h3>
@@ -76,9 +70,7 @@ include 'head.php';
                     <!-- Product 4 -->
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="holiday">
                         <div class="h-48 bg-gradient-to-br from-green-100 to-red-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l.09.26 2.78 8.57h9.03l-7.31 5.31 2.78 8.57L12 19.4l-7.37 5.31 2.78-8.57L.1 10.83h9.03L12 2z"/>
-                            </svg>
+                            <i class="fas fa-sleigh text-5xl text-green-600"></i>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Holiday Decorations</h3>
@@ -93,9 +85,7 @@ include 'head.php';
                     <!-- Product 5 -->
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="wedding">
                         <div class="h-48 bg-gradient-to-br from-yellow-100 to-orange-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 0 1 0-13zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/>
-                            </svg>
+                            <i class="fas fa-camera-retro text-5xl text-yellow-600"></i>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Vintage Wedding Decor</h3>
@@ -110,9 +100,7 @@ include 'head.php';
                     <!-- Product 6 -->
                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="corporate">
                         <div class="h-48 bg-gradient-to-br from-gray-100 to-blue-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                            </svg>
+                            <i class="fas fa-briefcase text-5xl text-gray-600"></i>
                         </div>
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Executive Table Settings</h3>
@@ -134,9 +122,7 @@ include 'head.php';
                     <div class="flex justify-between items-center mb-4">
                         <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
                         <button id="close-modal" class="text-gray-500 hover:text-gray-700">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
+                            <i class="fas fa-times w-6 h-6"></i>
                         </button>
                     </div>
                     <div id="modal-content" class="space-y-4">
