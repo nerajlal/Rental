@@ -47,8 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="text-gray-600">Stock: ${product.stock}</span>
                     </div>
                     <div class="flex items-center justify-between mt-3 space-x-2">
-                        <button class="edit-product-btn w-1/2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-xs font-medium transition" data-index="${index}">Edit</button>
-                        <button class="delete-product-btn w-1/2 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-xs font-medium transition" data-index="${index}">Delete</button>
+                            <button class="edit-product-btn w-full bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-xs font-medium transition" data-index="${index}">Edit</button>
                     </div>
                 </div>
             `;
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="flex justify-end space-x-4 pt-4">
                 <button type="button" class="cancel-edit-modal px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">Cancel</button>
-                <button type="button" class="upgrade-prompt-btn px-6 py-2 bg-gray-400 text-white rounded-md text-sm font-medium cursor-not-allowed" disabled>Save Changes</button>
+                <button type="button" class="save-changes-btn px-6 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700">Save Changes</button>
                 <button type="button" class="delete-from-edit-btn px-6 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700">Delete</button>
             </div>
         `;
@@ -106,7 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
         openModal(editProductModal);
 
         editProductModal.querySelector('.cancel-edit-modal').addEventListener('click', () => closeModal(editProductModal));
-        editProductModal.querySelector('.upgrade-prompt-btn').addEventListener('click', () => openModal(upgradeModal));
+        editProductModal.querySelector('.save-changes-btn').addEventListener('click', () => {
+            closeModal(editProductModal);
+            openModal(upgradeModal);
+        });
         editProductModal.querySelector('.delete-from-edit-btn').addEventListener('click', () => {
             handleDeleteClick(event);
             closeModal(editProductModal);

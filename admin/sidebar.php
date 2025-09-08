@@ -16,20 +16,20 @@
                 Products
             </a>
 
-            <a href="orders.php" class="sidebar-link <?php if ($page === 'orders') echo 'active'; ?> flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <!-- <a href="orders.php" class="sidebar-link <?php if ($page === 'orders') echo 'active'; ?> flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fas fa-shopping-cart w-5 h-5 mr-3"></i>
                 Orders
-            </a>
+            </a> -->
 
             <a href="customers.php" class="sidebar-link <?php if ($page === 'customers') echo 'active'; ?> flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fas fa-users w-5 h-5 mr-3"></i>
                 Customers
             </a>
 
-            <a href="settings.php" class="sidebar-link <?php if ($page === 'settings') echo 'active'; ?> flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <!-- <a href="settings.php" class="sidebar-link <?php if ($page === 'settings') echo 'active'; ?> flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fas fa-cog w-5 h-5 mr-3"></i>
                 Settings
-            </a>
+            </a> -->
         </nav>
 
         <div class="absolute bottom-6 left-6 right-6">
