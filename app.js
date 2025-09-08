@@ -87,18 +87,5 @@ document.addEventListener('DOMContentLoaded', function() {
         // This function is now empty as the configuration is applied server-side by PHP.
     }
 
-    // Apply custom styling based on configuration
-    function applyCustomColors() {
-        const style = document.createElement('style');
-        style.textContent = `
-            .nav-link.active { color: ${siteConfig.colors.primary}; }
-            .nav-link:hover { color: ${siteConfig.colors.primaryHover}; }
-            .nav-link-mobile.active { color: ${siteConfig.colors.primary}; }
-            .nav-link-mobile:hover { color: ${siteConfig.colors.primaryHover}; }
-        `;
-        document.head.appendChild(style);
-    }
-
     applyConfiguration();
-    applyCustomColors();
 });

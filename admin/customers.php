@@ -3,7 +3,7 @@
 <?php include 'sidebar.php'; ?>
 
         <!-- Page Content -->
-        <main class="p-6">
+        <main class="p-6 pt-24">
             <!-- Customers Page -->
             <div id="customers-page" class="page">
                 <div class="bg-white p-8 rounded-lg shadow-sm text-center">

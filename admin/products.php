@@ -3,7 +3,7 @@
 <?php include 'sidebar.php'; ?>
 
         <!-- Page Content -->
-        <main class="p-6">
+        <main class="p-6 pt-24">
             <!-- Products Page -->
             <div id="products-page" class="page">
                 <div class="flex justify-between items-center mb-6">

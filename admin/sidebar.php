@@ -2,7 +2,7 @@
     <div id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-white shadow-lg sidebar-transition z-40 slide-in hidden lg:block">
         <div class="p-6 border-b">
             <h1 class="text-xl font-bold text-gray-800">Admin Panel</h1>
-            <p class="text-sm text-gray-600">Ornament Rentals</p>
+            <p class="text-sm text-gray-600"><?php echo $siteConfig['business']['name']; ?></p>
         </div>
 
         <nav class="mt-6">

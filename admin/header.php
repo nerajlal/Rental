@@ -1,11 +1,21 @@
+<?php include_once '../config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Ornament Rentals</title>
+    <title>Admin Panel - <?php echo $siteConfig['business']['name']; ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: <?php echo json_encode($siteConfig['colors']); ?>
+                }
+            }
+        }
+    </script>
     <style>
         .sidebar-transition {
             transition: transform 0.3s ease-in-out;
@@ -38,7 +48,7 @@
     <!-- Main Content -->
     <div class="lg:ml-64 min-h-screen">
         <!-- Header -->
-        <header class="bg-white shadow-sm border-b px-6 py-4">
+        <header class="bg-white shadow-sm border-b px-6 py-4 fixed top-0 right-0 w-full lg:w-[calc(100%-16rem)] z-30">
             <div class="flex items-center justify-between">
                 <h2 id="page-title" class="text-2xl font-bold text-gray-800">Dashboard</h2>
                 <div class="flex items-center space-x-4">

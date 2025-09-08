@@ -53,21 +53,6 @@
         </div>
     </footer>
 
-    <script src="config.js"></script>
-    <script>
-        // Apply custom colors to Tailwind
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: siteConfig.colors.primary,
-                        secondary: siteConfig.colors.secondary,
-                        accent: siteConfig.colors.accent
-                    }
-                }
-            }
-        }
-    </script>
     <script src="products.js"></script>
     <script src="app.js"></script>
 </body>
