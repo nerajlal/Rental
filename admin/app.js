@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addProductModal = document.getElementById('add-product-modal');
     const editProductModal = document.getElementById('edit-product-modal');
     const upgradeModal = document.getElementById('upgrade-modal');
+    const upgradeBenefitsModal = document.getElementById('upgrade-benefits-modal');
     const addProductBtn = document.getElementById('add-product-btn');
     const quickAddProductBtn = document.getElementById('quick-add-product');
     const cancelAddModalBtn = document.getElementById('cancel-add-modal');
@@ -26,6 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cancelAddModalBtn) cancelAddModalBtn.addEventListener('click', () => closeModal(addProductModal));
     if (document.getElementById('cancel-upgrade-modal')) {
         document.getElementById('cancel-upgrade-modal').addEventListener('click', () => closeModal(upgradeModal));
+    }
+    if (document.getElementById('close-upgrade-benefits-modal')) {
+        document.getElementById('close-upgrade-benefits-modal').addEventListener('click', () => closeModal(upgradeBenefitsModal));
+    }
+    if (document.getElementById('upgrade-btn')) {
+        document.getElementById('upgrade-btn').addEventListener('click', () => openModal(upgradeBenefitsModal));
+    }
+    if (upgradeModal) {
+        const upgradeButton = upgradeModal.querySelector('.bg-green-600');
+        if (upgradeButton) {
+            upgradeButton.addEventListener('click', () => {
+                closeModal(upgradeModal);
+                openModal(upgradeBenefitsModal);
+            });
+        }
     }
 
     // --- Product Rendering ---
