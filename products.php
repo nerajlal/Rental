@@ -1,5 +1,6 @@
 <?php
 $page = 'products';
+include_once 'config.php';
 include 'head.php';
 ?>
 

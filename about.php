@@ -1,5 +1,6 @@
 <?php
 $page = 'about';
+include_once 'config.php';
 include 'head.php';
 ?>
 
