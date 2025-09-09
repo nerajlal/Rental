@@ -1,4 +1,3 @@
-@include('config')
 <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12 px-4">
         <div class="max-w-7xl mx-auto">
