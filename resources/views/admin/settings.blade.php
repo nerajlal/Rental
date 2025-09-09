@@ -1,6 +1,5 @@
-<?php $page = 'settings'; ?>
-<?php include 'header.php'; ?>
-<?php include 'sidebar.php'; ?>
+@include('admin.header')
+@include('admin.sidebar')
 
         <!-- Page Content -->
         <main class="p-6 pt-24">
@@ -14,4 +13,4 @@
             </div>
         </main>
 
-<?php include 'footer.php'; ?>
+@include('admin.footer')
