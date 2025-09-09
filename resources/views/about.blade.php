@@ -1,7 +1,3 @@
-@php
-$page = 'about';
-@endphp
-@include('config')
 @include('head')
 
     <!-- Main Content -->

@@ -1,6 +1,5 @@
-<?php $page = 'products'; ?>
-<?php include 'header.php'; ?>
-<?php include 'sidebar.php'; ?>
+@include('admin.header')
+@include('admin.sidebar')
 
         <!-- Page Content -->
         <main class="p-6 pt-24">
@@ -81,4 +80,4 @@
         </div>
     </div>
 
-<?php include 'footer.php'; ?>
+@include('admin.footer')

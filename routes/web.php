@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -9,42 +11,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Main site routes
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/products', function () {
-    return view('products');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/single-product', function () {
-    return view('single-product');
-});
+Route::get('/', [PageController::class, 'home']);
+Route::get('/products', [PageController::class, 'products']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/single-product', [PageController::class, 'singleProduct']);
 
 
 // Admin routes
 Route::prefix('admin')->group(function () {
-    Route::get('/', function () {
-        return view('admin.index');
-    });
-
-    Route::get('/products', function () {
-        return view('admin.products');
-    });
-
-    Route::get('/orders', function () {
-        return view('admin.orders');
-    });
-
-    Route::get('/customers', function () {
-        return view('admin.customers');
-    });
-
-    Route::get('/settings', function () {
-        return view('admin.settings');
-    });
+    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/products', [AdminController::class, 'products']);
+    Route::get('/orders', [AdminController::class, 'orders']);
+    Route::get('/customers', [AdminController::class, 'customers']);
+    Route::get('/settings', [AdminController::class, 'settings']);
 });

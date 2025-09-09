@@ -1,7 +1,3 @@
-@php
-$page = 'products';
-@endphp
-@include('config')
 @include('head')
 
     <!-- Main Content -->

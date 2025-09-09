@@ -1,4 +1,3 @@
-@php $page = 'dashboard'; @endphp
 @include('admin.header')
 @include('admin.sidebar')
 
