@@ -53,7 +53,6 @@
         </div>
     </footer>
 
-    <script src="products.js"></script>
-    <script src="app.js"></script>
+    <?php echo vite(['resources/views/app.js']); ?>
 </body>
 </html>

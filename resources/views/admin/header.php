@@ -7,6 +7,7 @@
     <title>Admin Panel - <?php echo $siteConfig['business']['name']; ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <?php echo vite(['resources/views/styles.css']); ?>
     <script>
         tailwind.config = {
             theme: {

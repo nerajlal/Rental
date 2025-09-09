@@ -1,7 +1,6 @@
 </main>
     </div>
-    <script src="products.js"></script>
-    <script src="app.js"></script>
+    <?php echo vite(['resources/views/admin/app.js']); ?>
 
     <!-- Upgrade Benefits Modal -->
     <div id="upgrade-benefits-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 modal-overlay">
