@@ -1,19 +1,19 @@
-<?php include_once 'config.php'; ?>
+@include('config')
 <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="col-span-2 md:col-span-1">
-                    <h3 class="text-xl font-bold mb-4" id="footer-brand"><?php echo $siteConfig['business']['name']; ?></h3>
+                    <h3 class="text-xl font-bold mb-4" id="footer-brand">{{ $siteConfig['business']['name'] }}</h3>
                     <p class="text-gray-400 mb-4">Creating unforgettable moments with premium decorative rentals for all your special occasions.</p>
                     <div class="flex space-x-4">
-                        <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']); ?>" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
-                        <a href="<?php echo $siteConfig['business']['instagram']; ?>" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="{{ $siteConfig['business']['instagram'] }}" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
                             <i class="fab fa-instagram text-2xl"></i>
                         </a>
-                        <a href="tel:<?php echo $siteConfig['business']['phone']; ?>" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="tel:{{ $siteConfig['business']['phone'] }}" class="text-gray-400 hover:text-white transition duration-300">
                             <i class="fas fa-phone text-2xl"></i>
                         </a>
                     </div>
@@ -21,10 +21,10 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.php" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="products.php" class="text-gray-400 hover:text-white transition duration-300">Products</a></li>
-                        <li><a href="about.php" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="index.php#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="{{ url('/') }}" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="{{ url('/products') }}" class="text-gray-400 hover:text-white transition duration-300">Products</a></li>
+                        <li><a href="{{ url('/about') }}" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="{{ url('/#contact') }}" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -39,20 +39,20 @@
                 <div class="col-span-2 md:col-span-1">
                     <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Phone: <a href="tel:<?php echo $siteConfig['business']['phone']; ?>" class="hover:text-white"><?php echo $siteConfig['business']['phone']; ?></a></li>
-                        <li>WhatsApp: <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']); ?>" target="_blank" class="hover:text-white"><?php echo $siteConfig['business']['whatsapp']; ?></a></li>
-                        <li>Email: <a href="mailto:<?php echo $siteConfig['business']['email']; ?>" class="hover:text-white"><?php echo $siteConfig['business']['email']; ?></a></li>
-                        <li>Address: <?php echo $siteConfig['business']['address']; ?></li>
+                        <li>Phone: <a href="tel:{{ $siteConfig['business']['phone'] }}" class="hover:text-white">{{ $siteConfig['business']['phone'] }}</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="hover:text-white">{{ $siteConfig['business']['whatsapp'] }}</a></li>
+                        <li>Email: <a href="mailto:{{ $siteConfig['business']['email'] }}" class="hover:text-white">{{ $siteConfig['business']['email'] }}</a></li>
+                        <li>Address: {{ $siteConfig['business']['address'] }}</li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row md:justify-between text-center md:text-left text-gray-400">
-                <p class="mb-2 md:mb-0">&copy; 2024 <?php echo $siteConfig['business']['name']; ?>. All rights reserved.</p>
+                <p class="mb-2 md:mb-0">&copy; 2024 {{ $siteConfig['business']['name'] }}. All rights reserved.</p>
                 <p>Developed by <a href="https://metora.in/" target="_blank" class="text-orange-400 hover:text-orange-500">Metora</a></p>
             </div>
         </div>
     </footer>
 
-    <?php echo vite(['resources/views/app.js']); ?>
+    @vite(['resources/views/app.js'])
 </body>
 </html>

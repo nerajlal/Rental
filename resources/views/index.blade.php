@@ -1,8 +1,8 @@
-<?php
+@php
 $page = 'home';
-include_once 'config.php';
-include 'head.php';
-?>
+@endphp
+@include('config')
+@include('head')
 
     <!-- Main Content -->
     <main class="pt-16" id="main-content">
@@ -92,8 +92,8 @@ include 'head.php';
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-semibold">Phone</h4>
-                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['phone']; ?></p>
-                                    <a href="tel:<?php echo $siteConfig['business']['phone']; ?>" class="text-orange-600 hover:text-orange-700 font-medium">Call us</a>
+                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['phone'] }}</p>
+                                    <a href="tel:{{ $siteConfig['business']['phone'] }}" class="text-orange-600 hover:text-orange-700 font-medium">Call us</a>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
@@ -102,8 +102,8 @@ include 'head.php';
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-semibold">Email</h4>
-                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['email']; ?></p>
-                                    <a href="mailto:<?php echo $siteConfig['business']['email']; ?>" class="text-orange-600 hover:text-orange-700 font-medium">Email us</a>
+                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['email'] }}</p>
+                                    <a href="mailto:{{ $siteConfig['business']['email'] }}" class="text-orange-600 hover:text-orange-700 font-medium">Email us</a>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
@@ -112,8 +112,8 @@ include 'head.php';
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-semibold">WhatsApp</h4>
-                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['whatsapp']; ?></p>
-                                    <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']); ?>" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium">Message us</a>
+                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['whatsapp'] }}</p>
+                                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium">Message us</a>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
@@ -123,7 +123,7 @@ include 'head.php';
                                 <div>
                                     <h4 class="text-xl font-semibold">Instagram</h4>
                                     <p class="text-gray-700 mt-1">@metora.in</p>
-                                    <a href="<?php echo $siteConfig['business']['instagram']; ?>" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium">Follow us</a>
+                                    <a href="{{ $siteConfig['business']['instagram'] }}" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium">Follow us</a>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
@@ -132,7 +132,7 @@ include 'head.php';
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-semibold">Address</h4>
-                                    <p class="text-gray-700 mt-1"><?php echo $siteConfig['business']['address']; ?></p>
+                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['address'] }}</p>
                                     <a href="#" class="text-orange-600 hover:text-orange-700 font-medium">Get directions</a>
                                 </div>
                             </div>
@@ -170,4 +170,4 @@ include 'head.php';
             </section>
     </main>
 
-<?php include 'footer.php'; ?>
+@include('footer')

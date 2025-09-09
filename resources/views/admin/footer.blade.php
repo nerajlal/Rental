@@ -1,6 +1,6 @@
 </main>
     </div>
-    <?php echo vite(['resources/views/admin/app.js']); ?>
+    @vite(['resources/views/admin/app.js'])
 
     <!-- Upgrade Benefits Modal -->
     <div id="upgrade-benefits-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 modal-overlay">
@@ -33,7 +33,7 @@
                 </li>
             </ul>
             <div class="mt-8 flex flex-col items-center">
-                <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']); ?>" target="_blank" class="w-full text-center px-6 py-3 bg-accent text-white rounded-md text-lg font-semibold hover:bg-accent-dark transition duration-300">
+                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="w-full text-center px-6 py-3 bg-accent text-white rounded-md text-lg font-semibold hover:bg-accent-dark transition duration-300">
                     <i class="fab fa-whatsapp mr-2"></i>
                     Contact on WhatsApp to Upgrade
                 </a>

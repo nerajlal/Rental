@@ -6,12 +6,12 @@
     <title>Premium Ornament Rentals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <?php echo vite(['resources/views/styles.css']); ?>
+    @vite(['resources/views/styles.css'])
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: <?php echo json_encode($siteConfig['colors']); ?>
+                    colors: {{ Illuminate\Support\Js::from($siteConfig['colors']) }}
                 }
             }
         }
@@ -25,7 +25,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-xl font-bold text-gray-800" id="nav-brand"><?php echo $siteConfig['business']['name']; ?></h1>
+                        <h1 class="text-xl font-bold text-gray-800" id="nav-brand">{{ $siteConfig['business']['name'] }}</h1>
                     </div>
                 </div>
 
@@ -39,9 +39,9 @@
                 <!-- Desktop navigation -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.php" class="nav-link px-3 py-2 text-sm font-medium <?php if ($page === 'home') echo 'active'; ?>">Home</a>
-                        <a href="products.php" class="nav-link px-3 py-2 text-sm font-medium <?php if ($page === 'products') echo 'active'; ?>">Products</a>
-                        <a href="about.php" class="nav-link px-3 py-2 text-sm font-medium <?php if ($page === 'about') echo 'active'; ?>">About</a>
+                        <a href="{{ url('/') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'home') active @endif">Home</a>
+                        <a href="{{ url('/products') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'products') active @endif">Products</a>
+                        <a href="{{ url('/about') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'about') active @endif">About</a>
                         <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
                     </div>
                 </div>
@@ -50,9 +50,9 @@
             <!-- Mobile navigation -->
             <div class="md:hidden hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.php" class="nav-link-mobile block px-3 py-2 text-base font-medium <?php if ($page === 'home') echo 'active'; ?>">Home</a>
-                    <a href="products.php" class="nav-link-mobile block px-3 py-2 text-base font-medium <?php if ($page === 'products') echo 'active'; ?>">Products</a>
-                    <a href="about.php" class="nav-link-mobile block px-3 py-2 text-base font-medium <?php if ($page === 'about') echo 'active'; ?>">About</a>
+                    <a href="{{ url('/') }}" class="nav-link-mobile block px-3 py-2 text-base font-medium @if($page === 'home') active @endif">Home</a>
+                    <a href="{{ url('/products') }}" class="nav-link-mobile block px-3 py-2 text-base font-medium @if($page === 'products') active @endif">Products</a>
+                    <a href="{{ url('/about') }}" class="nav-link-mobile block px-3 py-2 text-base font-medium @if($page === 'about') active @endif">About</a>
                     <a href="#" class="block px-3 py-2 text-base font-medium text-orange-600">Contact</a>
                 </div>
             </div>

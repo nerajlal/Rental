@@ -1,8 +1,8 @@
-<?php
+@php
 $page = 'about';
-include_once 'config.php';
-include 'head.php';
-?>
+@endphp
+@include('config')
+@include('head')
 
     <!-- Main Content -->
     <main class="pt-16" id="main-content">
@@ -65,4 +65,4 @@ include 'head.php';
         </section>
     </main>
 
-<?php include 'footer.php'; ?>
+@include('footer')
