@@ -33,7 +33,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Description</h3>
-                            <p class="text-gray-600 leading-relaxed">{{ $product->description }}</p>
+                            <p class="text-gray-600 leading-relaxed whitespace-pre-line">{{ $product->description }}</p>
                         </div>
 
                         <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
@@ -51,10 +51,6 @@
                                 <p class="text-gray-600">{{ $product->weight }}</p>
                             </div>
                             @endif
-                            <div>
-                                <h4 class="font-semibold text-gray-700">Stock</h4>
-                                <p class="text-gray-600">{{ $product->stock > 0 ? 'In Stock' : 'Out of Stock' }}</p>
-                            </div>
                         </div>
 
                         <!-- Action Buttons -->
