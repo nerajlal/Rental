@@ -78,22 +78,9 @@
         <section class="py-12 bg-gray-100">
             <div class="max-w-7xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">You Might Also Like</h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    @foreach ($similarProducts as $similarProduct)
-                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center">
-                                <a href="{{ route('products.show', $similarProduct) }}">
-                                    <img src="{{ $similarProduct->images->first() ? route('product.image', ['imageName' => basename($similarProduct->images->first()->image_path)]) : 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $similarProduct->name }}" class="w-full h-full object-cover">
-                                </a>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg mb-2">{{ $similarProduct->name }}</h3>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-orange-600 font-bold">${{ number_format($similarProduct->price, 2) }}/day</span>
-                                    <a href="{{ route('products.show', $similarProduct) }}" class="product-details bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300">View Details</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    @foreach ($similarProducts as $product)
+                        <x-product-card :product="$product" />
                     @endforeach
                 </div>
             </div>
