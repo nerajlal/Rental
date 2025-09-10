@@ -167,4 +167,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // The rest of the product management JS is now removed as it's handled by Blade.
     // The edit/delete functionality will need to be re-implemented in a future step if needed.
+
+    // Re-adding modal logic for Add Product
+    const addProductModal = document.getElementById('add-product-modal');
+    const addProductBtn = document.getElementById('add-product-btn');
+    const cancelAddModalBtn = document.getElementById('cancel-add-modal');
+
+    if (addProductModal && addProductBtn && cancelAddModalBtn) {
+        addProductBtn.addEventListener('click', () => openModal(addProductModal));
+        cancelAddModalBtn.addEventListener('click', () => closeModal(addProductModal));
+    }
 });
