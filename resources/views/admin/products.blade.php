@@ -151,3 +151,31 @@ use Illuminate\Support\Facades\Storage;
     </div>
 
 @include('admin.footer')
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const addProductBtn = document.getElementById("add-product-btn");
+    const addProductModal = document.getElementById("add-product-modal");
+    const cancelAddBtn = document.getElementById("cancel-add-modal");
+
+    // Open modal
+    addProductBtn?.addEventListener("click", () => {
+        addProductModal.classList.remove("hidden");
+    });
+
+    // Close modal on cancel button
+    cancelAddBtn?.addEventListener("click", () => {
+        addProductModal.classList.add("hidden");
+    });
+
+    // Close modal when clicking outside (overlay)
+    addProductModal?.addEventListener("click", (e) => {
+        if (e.target.classList.contains("modal-overlay")) {
+            addProductModal.classList.add("hidden");
+        }
+    });
+});
+</script>
+    

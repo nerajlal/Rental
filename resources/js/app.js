@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const productsContainer = document.getElementById('products-container');
 
     // --- Modal Control ---
-    const openModal = (modal) => modal && modal.classList.remove('hidden');
-    const closeModal = (modal) => modal && modal.classList.add('hidden');
+    // const openModal = (modal) => modal && modal.classList.remove('hidden');
+    // const closeModal = (modal) => modal && modal.classList.add('hidden');
 
     if (addProductBtn) addProductBtn.addEventListener('click', () => openModal(addProductModal));
     if (quickAddProductBtn) quickAddProductBtn.addEventListener('click', () => openModal(addProductModal));
