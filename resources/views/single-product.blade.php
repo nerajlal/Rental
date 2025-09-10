@@ -80,4 +80,27 @@
         @endif
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnails = document.querySelectorAll('[alt$="thumbnail"]');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Update main image src
+                    mainImage.src = this.src;
+
+                    // Update active state border
+                    thumbnails.forEach(t => t.parentElement.classList.remove('border-orange-500'));
+                    this.parentElement.classList.add('border-orange-500');
+                });
+            });
+
+            // Set the first thumbnail as active initially
+            if (thumbnails.length > 0) {
+                thumbnails[0].parentElement.classList.add('border-orange-500');
+            }
+        });
+    </script>
+
 @include('footer')
