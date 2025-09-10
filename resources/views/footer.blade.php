@@ -96,9 +96,6 @@
                 if (!wishlist.includes(productId)) {
                     wishlist.push(productId);
                     updateStorage('wishlist', wishlist);
-                    alert('Added to wishlist!');
-                } else {
-                    alert('This item is already in your wishlist.');
                 }
             };
 
@@ -108,9 +105,6 @@
                 if (!cart.includes(productId)) {
                     cart.push(productId);
                     updateStorage('cart', cart);
-                    alert('Added to cart!');
-                } else {
-                    alert('This item is already in your cart.');
                 }
             };
 

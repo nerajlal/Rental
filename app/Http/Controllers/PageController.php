@@ -29,10 +29,17 @@ class PageController extends BaseController
 
     public function showProduct(Product $product)
     {
+        $similarProducts = Product::where('category', $product->category)
+            ->where('id', '!=', $product->id)
+            ->with('images')
+            ->limit(4)
+            ->get();
+
         return view('single-product', [
             'siteConfig' => $this->getSiteConfig(),
             'page' => 'single-product',
             'product' => $product,
+            'similarProducts' => $similarProducts,
         ]);
     }
 }
