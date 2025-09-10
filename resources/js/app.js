@@ -168,6 +168,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // The rest of the product management JS is now removed as it's handled by Blade.
     // The edit/delete functionality will need to be re-implemented in a future step if needed.
 
+    // --- Modal Control ---
+    const openModal = (modal) => modal && modal.classList.remove('hidden');
+    const closeModal = (modal) => modal && modal.classList.add('hidden');
+
     // Re-adding modal logic for Add Product
     const addProductModal = document.getElementById('add-product-modal');
     const addProductBtn = document.getElementById('add-product-btn');
