@@ -4,7 +4,7 @@
     <main class="pt-16" id="main-content">
         <!-- Home Page Content -->
         <!-- Hero Section -->
-        <section class="hero-gradient text-white py-20 px-4">
+        <section class="bg-gradient-to-r from-primary to-primaryHover text-white py-20 px-4">
             <div class="max-w-7xl mx-auto text-center">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6" id="hero-title">Transform Your Events with Elegant Decorations</h2>
                 <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Premium ornament rentals for weddings, corporate events, parties, and special occasions. Make every moment memorable with our exquisite collection.</p>
