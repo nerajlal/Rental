@@ -41,20 +41,16 @@
                                 <h4 class="font-semibold text-gray-700">Category</h4>
                                 <p class="text-gray-600">{{ $product->category }}</p>
                             </div>
-                            <!--
                             <div>
                                 <h4 class="font-semibold text-gray-700">Subcategory</h4>
                                 <p class="text-gray-600">{{ $product->subcategory }}</p>
                             </div>
-                            -->
-                            <!--
                             @if($product->weight)
                             <div>
                                 <h4 class="font-semibold text-gray-700">Weight</h4>
                                 <p class="text-gray-600">{{ $product->weight }}</p>
                             </div>
                             @endif
-                            -->
                         </div>
 
                         <!-- Action Buttons -->
