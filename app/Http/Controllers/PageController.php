@@ -27,8 +27,12 @@ class PageController extends BaseController
         return view('about', ['siteConfig' => $this->getSiteConfig(), 'page' => 'about']);
     }
 
-    public function singleProduct()
+    public function showProduct(Product $product)
     {
-        return view('single-product', ['siteConfig' => $this->getSiteConfig(), 'page' => 'single-product']);
+        return view('single-product', [
+            'siteConfig' => $this->getSiteConfig(),
+            'page' => 'single-product',
+            'product' => $product,
+        ]);
     }
 }

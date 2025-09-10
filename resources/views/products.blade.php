@@ -32,7 +32,7 @@
                                 <p class="text-gray-600 text-sm mb-3">{{ Str::limit($product->description, 100) }}</p>
                                 <div class="flex justify-between items-center">
                                     <span class="text-orange-600 font-bold">${{ number_format($product->price, 2) }}/day</span>
-                                    <button class="product-details bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300" data-product="{{ $product->id }}">View Details</button>
+                                    <a href="{{ route('products.show', $product) }}" class="product-details bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -42,27 +42,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Product Detail Modal -->
-        <div id="product-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-            <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
-                        <button id="close-modal" class="text-gray-500 hover:text-gray-700">
-                            <i class="fas fa-times w-6 h-6"></i>
-                        </button>
-                    </div>
-                    <div id="modal-content" class="space-y-4">
-                        <!-- Content will be populated by JavaScript -->
-                    </div>
-                    <div class="mt-6 flex gap-4">
-                        <button class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-medium transition duration-300 flex-1">Request Quote</button>
-                        <button class="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg font-medium transition duration-300 flex-1">Add to Wishlist</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
 @include('footer')

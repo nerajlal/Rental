@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 
 // Main site routes
 Route::get('/', [PageController::class, 'home']);
-Route::get('/products', [PageController::class, 'products']);
+Route::get('/products', [PageController::class, 'products'])->name('products.index');
+Route::get('/products/{product}', [PageController::class, 'showProduct'])->name('products.show');
 Route::get('/about', [PageController::class, 'about']);
-Route::get('/single-product', [PageController::class, 'singleProduct']);
 
 // Public image route
 Route::get('/product-image/{imageName}', [ProductController::class, 'getProductImage'])->name('product.image');
