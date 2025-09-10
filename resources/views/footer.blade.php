@@ -53,5 +53,29 @@
     </footer>
 
     @vite(['resources/js/app.js'])
+    @include('auth.login_modal')
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginModal = document.getElementById('login-modal');
+            const closeLoginModalBtn = document.getElementById('close-login-modal');
+
+            function showModal() {
+                loginModal.classList.remove('hidden');
+            }
+
+            function hideModal() {
+                loginModal.classList.add('hidden');
+            }
+
+            if (closeLoginModalBtn) {
+                closeLoginModalBtn.addEventListener('click', hideModal);
+            }
+
+            @if(session('show_admin_login') || $errors->any())
+                showModal();
+            @endif
+        });
+    </script>
 </body>
 </html>

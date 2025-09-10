@@ -32,9 +32,10 @@ class LoginController extends Controller
             return redirect()->intended('/admin');
         }
 
-        return back()->withErrors([
-            'username' => 'The provided credentials do not match our records.',
-        ])->onlyInput('username');
+        return back()
+            ->withErrors(['username' => 'The provided credentials do not match our records.'])
+            ->with('show_admin_login', true)
+            ->onlyInput('username');
     }
 
     /**

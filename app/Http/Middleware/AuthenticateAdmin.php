@@ -18,7 +18,7 @@ class AuthenticateAdmin
     public function handle(Request $request, Closure $next)
     {
         if (!Auth::guard('admin')->check()) {
-            return redirect('/admin/login');
+            return redirect('/')->with('show_admin_login', true);
         }
 
         return $next($request);

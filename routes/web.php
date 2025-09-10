@@ -18,8 +18,7 @@ Route::get('/about', [PageController::class, 'about']);
 Route::get('/single-product', [PageController::class, 'singleProduct']);
 
 // Admin Auth routes
-Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin/login', [LoginController::class, 'login']);
+Route::post('/admin/login', [LoginController::class, 'login'])->name('admin.login');
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 
