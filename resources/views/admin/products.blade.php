@@ -133,7 +133,63 @@ use Illuminate\Support\Facades\Storage;
         <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-2xl fade-in">
             <h2 class="text-2xl font-bold mb-6">Edit Product</h2>
             <form id="edit-product-form" class="space-y-4">
-                <!-- Form content will be populated by JavaScript -->
+                <input type="hidden" id="edit-product-id" name="id">
+                <div>
+                    <label for="edit-product-name" class="block text-sm font-medium text-gray-700">Product Name</label>
+                    <input type="text" id="edit-product-name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" required>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="edit-category" class="block text-sm font-medium text-gray-700">Category</label>
+                        <select id="edit-category" name="category" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" required>
+                            <option>Wedding Jewelry</option>
+                            <option>Engagement Jewelry</option>
+                            <option>Party Jewelry</option>
+                            <option>Traditional Jewelry</option>
+                            <option>Bridal Jewelry Sets</option>
+                            <option>Festival Jewelry</option>
+                            <option>Contemporary Jewelry</option>
+                            <option>Daily Wear Jewelry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="edit-subcategory" class="block text-sm font-medium text-gray-700">Subcategory</label>
+                        <select id="edit-subcategory" name="subcategory" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" required>
+                            <option>Necklaces</option>
+                            <option>Earrings</option>
+                            <option>Bangles / Bracelets</option>
+                            <option>Rings</option>
+                            <option>Maang Tikka</option>
+                            <option>Matha Patti</option>
+                            <option>Nose Rings / Nath</option>
+                            <option>Waist Belt (Kamarbandh / Oddiyanam)</option>
+                            <option>Armlets (Bajubandh)</option>
+                            <option>Anklets / Payal</option>
+                            <option>Full Bridal Sets (complete matching set)</option>
+                            <option>Temple Jewelry Sets</option>
+                            <option>Crown / Head Accessories</option>
+                            <option>Hair Accessories (pins, clips, jadas)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="edit-price" class="block text-sm font-medium text-gray-700">Price</label>
+                        <input type="number" id="edit-price" name="price" step="0.01" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" required>
+                    </div>
+                    <div>
+                        <label for="edit-weight" class="block text-sm font-medium text-gray-700">Weight (e.g., 25g, 2-3 tola)</label>
+                        <input type="text" id="edit-weight" name="weight" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                    </div>
+                </div>
+                <div>
+                    <label for="edit-product-description" class="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea id="edit-product-description" name="description" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                </div>
+                <div class="flex justify-end space-x-4 pt-4">
+                    <button type="button" id="cancel-edit-modal" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">Cancel</button>
+                    <button type="submit" class="px-6 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary-dark">Save Changes</button>
+                </div>
             </form>
         </div>
     </div>
@@ -159,21 +215,61 @@ document.addEventListener("DOMContentLoaded", () => {
     const addProductBtn = document.getElementById("add-product-btn");
     const addProductModal = document.getElementById("add-product-modal");
     const cancelAddBtn = document.getElementById("cancel-add-modal");
+    const editProductModal = document.getElementById("edit-product-modal");
+    const editProductForm = document.getElementById("edit-product-form");
+    const productsContainer = document.getElementById("products-container");
 
-    // Open modal
-    addProductBtn?.addEventListener("click", () => {
-        addProductModal.classList.remove("hidden");
-    });
+    // Function to open a modal
+    const openModal = (modal) => modal.classList.remove("hidden");
 
-    // Close modal on cancel button
-    cancelAddBtn?.addEventListener("click", () => {
-        addProductModal.classList.add("hidden");
-    });
+    // Function to close a modal
+    const closeModal = (modal) => modal.classList.add("hidden");
 
-    // Close modal when clicking outside (overlay)
+    // Open Add Product modal
+    addProductBtn?.addEventListener("click", () => openModal(addProductModal));
+
+    // Close Add Product modal
+    cancelAddBtn?.addEventListener("click", () => closeModal(addProductModal));
     addProductModal?.addEventListener("click", (e) => {
         if (e.target.classList.contains("modal-overlay")) {
-            addProductModal.classList.add("hidden");
+            closeModal(addProductModal);
+        }
+    });
+
+    // Handle Edit Product functionality
+    productsContainer.addEventListener('click', async (e) => {
+        if (e.target.classList.contains('edit-product-btn')) {
+            const productId = e.target.dataset.id;
+
+            try {
+                const response = await fetch(`/admin/products/${productId}`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const product = await response.json();
+
+                // Populate the form
+                editProductForm.querySelector('#edit-product-id').value = product.id;
+                editProductForm.querySelector('#edit-product-name').value = product.name;
+                editProductForm.querySelector('#edit-category').value = product.category;
+                editProductForm.querySelector('#edit-subcategory').value = product.subcategory;
+                editProductForm.querySelector('#edit-price').value = product.price;
+                editProductForm.querySelector('#edit-weight').value = product.weight;
+                editProductForm.querySelector('#edit-product-description').value = product.description;
+
+                openModal(editProductModal);
+
+            } catch (error) {
+                console.error('Error fetching product details:', error);
+                // Optionally, show an error message to the user
+            }
+        }
+    });
+
+    // Close Edit Product modal
+    editProductModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay') || e.target.id === 'cancel-edit-modal') {
+            closeModal(editProductModal);
         }
     });
 });

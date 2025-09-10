@@ -62,9 +62,9 @@ class ProductController extends BaseController
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Product $product)
     {
-        //
+        return response()->json($product->load('images'));
     }
 
     /**
