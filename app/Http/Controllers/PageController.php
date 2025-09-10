@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class PageController extends BaseController
@@ -13,7 +14,12 @@ class PageController extends BaseController
 
     public function products()
     {
-        return view('products', ['siteConfig' => $this->getSiteConfig(), 'page' => 'products']);
+        $products = Product::with('images')->get();
+        return view('products', [
+            'siteConfig' => $this->getSiteConfig(),
+            'page' => 'products',
+            'products' => $products,
+        ]);
     }
 
     public function about()
