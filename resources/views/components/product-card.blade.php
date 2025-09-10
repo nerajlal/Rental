@@ -9,6 +9,9 @@
         <div class="absolute top-2 left-2 bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
             {{ $product->category }}
         </div>
+        <button onclick="toggleWishlist({{ $product->id }}, this)" data-product-id="{{ $product->id }}" class="wishlist-toggle-btn absolute top-2 right-2 bg-white rounded-full p-2 transition-colors duration-300 hover:bg-red-100">
+            <i class="far fa-heart text-gray-700 text-xl"></i>
+        </button>
     </div>
     <div class="p-4 flex flex-col flex-grow">
         <h3 class="font-semibold text-lg mb-2 text-gray-800 flex-grow">

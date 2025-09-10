@@ -91,12 +91,45 @@
                 updateHeaderCounts();
             };
 
-            const addToWishlist = (productId) => {
+            const toggleWishlist = (productId, element) => {
                 let wishlist = getStorage('wishlist');
-                if (!wishlist.includes(productId)) {
+                const productIndex = wishlist.indexOf(productId);
+
+                if (productIndex > -1) {
+                    // Remove from wishlist
+                    wishlist.splice(productIndex, 1);
+                } else {
+                    // Add to wishlist
                     wishlist.push(productId);
-                    updateStorage('wishlist', wishlist);
                 }
+
+                updateStorage('wishlist', wishlist);
+                updateWishlistIcons();
+
+                // If on wishlist page, remove the card from the DOM
+                if (element && element.closest('.wishlist-page')) {
+                    element.closest('.product-card-container').remove();
+                    if (getStorage('wishlist').length === 0) {
+                        document.getElementById('wishlist-empty').classList.remove('hidden');
+                    }
+                }
+            };
+
+            const updateWishlistIcons = () => {
+                const wishlist = getStorage('wishlist');
+                const buttons = document.querySelectorAll('.wishlist-toggle-btn');
+
+                buttons.forEach(button => {
+                    const productId = parseInt(button.dataset.productId, 10);
+                    const icon = button.querySelector('i');
+                    if (wishlist.includes(productId)) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas', 'text-red-500');
+                    } else {
+                        icon.classList.remove('fas', 'text-red-500');
+                        icon.classList.add('far');
+                    }
+                });
             };
 
             const addToCart = (productId) => {
@@ -122,11 +155,15 @@
             };
 
             // Make functions globally accessible
-            window.addToWishlist = addToWishlist;
+            window.toggleWishlist = toggleWishlist;
             window.addToCart = addToCart;
 
-            // Initial count update on page load
+            // Initial count and icon update on page load
             updateHeaderCounts();
+            updateWishlistIcons();
+
+            // Re-check icons after dynamic content loads (e.g., on wishlist page)
+            document.addEventListener('dynamicContentLoaded', updateWishlistIcons);
         });
     </script>
 </body>
