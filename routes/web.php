@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -24,10 +25,16 @@ Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.lo
 
 // Protected Admin routes
 Route::middleware(['auth.admin'])->prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
-    Route::get('/products', [AdminController::class, 'products']);
-    Route::get('/orders', [AdminController::class, 'orders']);
-    Route::get('/customers', [AdminController::class, 'customers']);
-    Route::get('/settings', [AdminController::class, 'settings']);
-    Route::post('/settings/password', [AdminController::class, 'updatePassword']);
+    Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
+
+    // Product Routes
+    Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
+    Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
+
+    Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders.index');
+    Route::get('/customers', [AdminController::class, 'customers'])->name('admin.customers.index');
+
+    // Settings Routes
+    Route::get('/settings', [AdminController::class, 'settings'])->name('admin.settings.index');
+    Route::post('/settings/password', [AdminController::class, 'updatePassword'])->name('admin.settings.password.update');
 });
