@@ -8,14 +8,14 @@
                 <div class="grid md:grid-cols-2 gap-12 items-start">
                     <!-- Product Image Gallery -->
                     <div>
-                        <div class="bg-gray-200 rounded-lg mb-4">
-                            <img id="main-product-image" src="{{ $product->images->first() ? route('product.image', ['imageName' => basename($product->images->first()->image_path)]) : 'https://via.placeholder.com/600x600/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-auto object-cover rounded-lg">
+                        <div class="bg-gray-200 rounded-lg mb-4 aspect-square">
+                            <img id="main-product-image" src="{{ $product->images->first() ? route('product.image', ['imageName' => basename($product->images->first()->image_path)]) : 'https://via.placeholder.com/600x600/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-full object-cover rounded-lg">
                         </div>
                         @if($product->images->count() > 1)
                             <div class="grid grid-cols-5 gap-2">
                                 @foreach($product->images as $image)
-                                    <div>
-                                        <img src="{{ route('product.image', ['imageName' => basename($image->image_path)]) }}" alt="{{ $product->name }} thumbnail" class="w-full h-auto object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-orange-500 transition">
+                                    <div class="aspect-square bg-gray-100 rounded-md">
+                                        <img src="{{ route('product.image', ['imageName' => basename($image->image_path)]) }}" alt="{{ $product->name }} thumbnail" class="w-full h-full object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-orange-500 transition">
                                     </div>
                                 @endforeach
                             </div>
