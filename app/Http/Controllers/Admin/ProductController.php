@@ -86,9 +86,17 @@ class ProductController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Product $product)
     {
-        //
+        // Delete associated images from storage
+        foreach ($product->images as $image) {
+            Storage::disk('public')->delete($image->image_path);
+        }
+
+        // Delete the product from the database
+        $product->delete();
+
+        return response()->json(['success' => 'Product deleted successfully.']);
     }
 
     public function getProductImage($imageName)

@@ -186,9 +186,14 @@ use Illuminate\Support\Facades\Storage;
                     <label for="edit-product-description" class="block text-sm font-medium text-gray-700">Description</label>
                     <textarea id="edit-product-description" name="description" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"></textarea>
                 </div>
-                <div class="flex justify-end space-x-4 pt-4">
-                    <button type="button" id="cancel-edit-modal" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">Cancel</button>
-                    <button type="submit" class="px-6 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary-dark">Save Changes</button>
+                <div class="flex justify-between items-center pt-4">
+                    <div>
+                        <button type="button" id="delete-product-btn" class="px-6 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700">Delete</button>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button type="button" id="cancel-edit-modal" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">Cancel</button>
+                        <button type="submit" class="px-6 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary-dark">Save Changes</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -285,6 +290,36 @@ document.addEventListener("DOMContentLoaded", () => {
     upgradeModal.addEventListener('click', (e) => {
         if (e.target.classList.contains('modal-overlay') || e.target.id === 'cancel-upgrade-modal') {
             closeModal(upgradeModal);
+        }
+    });
+
+    // Handle Delete Product
+    const deleteBtn = document.getElementById('delete-product-btn');
+    deleteBtn.addEventListener('click', async () => {
+        const productId = document.getElementById('edit-product-id').value;
+        if (confirm('Are you sure you want to delete this product?')) {
+            try {
+                const response = await fetch(`/admin/products/${productId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    closeModal(editProductModal);
+                    // Find the product card and remove it from the DOM
+                    const productCard = document.querySelector(`.edit-product-btn[data-id='${productId}']`).closest('.bg-white');
+                    productCard.remove();
+                    // Optionally, show a success message
+                } else {
+                    // Handle error
+                    console.error('Failed to delete product');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
         }
     });
 });
