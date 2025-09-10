@@ -18,6 +18,9 @@ Route::get('/products', [PageController::class, 'products']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/single-product', [PageController::class, 'singleProduct']);
 
+// Public image route
+Route::get('/product-image/{imageName}', [ProductController::class, 'getProductImage'])->name('product.image');
+
 // Admin Auth routes
 Route::post('/admin/login', [LoginController::class, 'login'])->name('admin.login');
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
@@ -32,7 +35,6 @@ Route::middleware(['auth.admin'])->prefix('admin')->group(function () {
     Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
     Route::get('/products/{product}', [ProductController::class, 'show'])->name('admin.products.show');
     Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
-    Route::get('/product-image/{imageName}', [ProductController::class, 'getProductImage'])->name('admin.product.image');
 
     Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders.index');
     Route::get('/customers', [AdminController::class, 'customers'])->name('admin.customers.index');

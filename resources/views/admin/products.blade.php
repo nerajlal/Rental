@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Storage;
                     @forelse ($products as $product)
                         <div class="bg-white p-4 rounded-lg shadow-sm border flex flex-col justify-between">
                             <div>
-                                <img src="{{ $product->images->first() ? route('admin.product.image', ['imageName' => basename($product->images->first()->image_path)]) : 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-32 object-cover rounded-md mb-4">
+                                <img src="{{ $product->images->first() ? route('product.image', ['imageName' => basename($product->images->first()->image_path)]) : 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-32 object-cover rounded-md mb-4">
                                 <h4 class="font-semibold text-md mb-1">{{ $product->name }}</h4>
                                 <p class="text-sm text-gray-600 mb-2">{{ $product->category }} / {{ $product->subcategory }}</p>
                                 <p class="text-xs text-gray-500 mb-2">Weight: {{ $product->weight ?? 'N/A' }}</p>

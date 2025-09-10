@@ -25,7 +25,7 @@
                     @forelse ($products as $product)
                         <div class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover" data-category="{{ strtolower(str_replace(' ', '-', $product->category)) }}">
                             <div class="h-48 bg-gray-200 flex items-center justify-center">
-                                <img src="{{ $product->images->first() ? route('admin.product.image', ['imageName' => basename($product->images->first()->image_path)]) : 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
+                                <img src="{{ $product->images->first() ? route('product.image', ['imageName' => basename($product->images->first()->image_path)]) : 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
                             </div>
                             <div class="p-4">
                                 <h3 class="font-semibold text-lg mb-2">{{ $product->name }}</h3>
