@@ -1,3 +1,9 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .hero-gradient {
     background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
 }

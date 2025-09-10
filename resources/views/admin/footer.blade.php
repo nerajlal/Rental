@@ -1,6 +1,5 @@
 </main>
     </div>
-    @vite(['resources/js/app.js'])
 
     <!-- Upgrade Benefits Modal -->
     <div id="upgrade-benefits-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 modal-overlay">

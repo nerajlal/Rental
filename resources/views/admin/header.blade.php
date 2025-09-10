@@ -4,40 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - {{ $siteConfig['business']['name'] }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    @vite(['resources/css/app.css'])
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {{ Illuminate\Support\Js::from($siteConfig['colors']) }}
-                }
-            }
-        }
-    </script>
-    <style>
-        .sidebar-transition {
-            transition: transform 0.3s ease-in-out;
-        }
-        .modal-overlay {
-            backdrop-filter: blur(4px);
-        }
-        .fade-in {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .slide-in {
-            animation: slideIn 0.3s ease-out;
-        }
-        @keyframes slideIn {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-50">
     <!-- Mobile Sidebar Toggle -->
