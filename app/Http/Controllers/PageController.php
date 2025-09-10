@@ -27,6 +27,11 @@ class PageController extends BaseController
         return view('about', ['siteConfig' => $this->getSiteConfig(), 'page' => 'about']);
     }
 
+    public function contact()
+    {
+        return view('contact', ['siteConfig' => $this->getSiteConfig(), 'page' => 'contact']);
+    }
+
     public function showProduct(Product $product)
     {
         $similarProducts = Product::where('category', $product->category)

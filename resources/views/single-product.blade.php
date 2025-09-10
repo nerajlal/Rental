@@ -54,12 +54,20 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex flex-col gap-4">
-                            <button onclick="toggleWishlist({{ $product->id }}, this)" class="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center gap-2 wishlist-toggle-btn" data-product-id="{{ $product->id }}">
+                        <div class="flex flex-row gap-4">
+                            <button onclick="toggleWishlist({{ $product->id }}, this)" 
+                                class="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center gap-2 wishlist-toggle-btn" 
+                                data-product-id="{{ $product->id }}">
                                 <i class="far fa-heart"></i>
                                 <span>Add to Wishlist</span>
                             </button>
+                            
+                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" class="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-green-500"></i>
+                                <span>Send Enquiry</span>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
