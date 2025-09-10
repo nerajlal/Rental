@@ -139,32 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- Modal Control ---
-    const openModal = (modal) => modal && modal.classList.remove('hidden');
-    const closeModal = (modal) => modal && modal.classList.add('hidden');
-
-    if (addProductBtn) addProductBtn.addEventListener('click', () => openModal(addProductModal));
-    if (quickAddProductBtn) quickAddProductBtn.addEventListener('click', () => openModal(addProductModal));
-    if (cancelAddModalBtn) cancelAddModalBtn.addEventListener('click', () => closeModal(addProductModal));
-    if (document.getElementById('cancel-upgrade-modal')) {
-        document.getElementById('cancel-upgrade-modal').addEventListener('click', () => closeModal(upgradeModal));
-    }
-    if (document.getElementById('close-upgrade-benefits-modal')) {
-        document.getElementById('close-upgrade-benefits-modal').addEventListener('click', () => closeModal(upgradeBenefitsModal));
-    }
-    if (document.getElementById('upgrade-btn')) {
-        document.getElementById('upgrade-btn').addEventListener('click', () => openModal(upgradeBenefitsModal));
-    }
-    if (upgradeModal) {
-        const upgradeButton = upgradeModal.querySelector('.bg-green-600');
-        if (upgradeButton) {
-            upgradeButton.addEventListener('click', () => {
-                closeModal(upgradeModal);
-                openModal(upgradeBenefitsModal);
-            });
-        }
-    }
-
     // The rest of the product management JS is now removed as it's handled by Blade.
     // The edit/delete functionality will need to be re-implemented in a future step if needed.
 });
