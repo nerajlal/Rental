@@ -77,5 +77,63 @@
             @endif
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Cart & Wishlist Logic ---
+            const getStorage = (key) => {
+                const data = localStorage.getItem(key);
+                return data ? JSON.parse(data) : [];
+            };
+
+            const updateStorage = (key, data) => {
+                localStorage.setItem(key, JSON.stringify(data));
+                updateHeaderCounts();
+            };
+
+            const addToWishlist = (productId) => {
+                let wishlist = getStorage('wishlist');
+                if (!wishlist.includes(productId)) {
+                    wishlist.push(productId);
+                    updateStorage('wishlist', wishlist);
+                    alert('Added to wishlist!');
+                } else {
+                    alert('This item is already in your wishlist.');
+                }
+            };
+
+            const addToCart = (productId) => {
+                let cart = getStorage('cart');
+                // For simplicity, we'll just store product IDs. A real cart would store quantity too.
+                if (!cart.includes(productId)) {
+                    cart.push(productId);
+                    updateStorage('cart', cart);
+                    alert('Added to cart!');
+                } else {
+                    alert('This item is already in your cart.');
+                }
+            };
+
+            const updateHeaderCounts = () => {
+                const wishlistCount = getStorage('wishlist').length;
+                const cartCount = getStorage('cart').length;
+
+                document.getElementById('wishlist-count').textContent = wishlistCount;
+                document.getElementById('cart-count').textContent = cartCount;
+
+                const mobileWishlistCount = document.getElementById('mobile-wishlist-count');
+                const mobileCartCount = document.getElementById('mobile-cart-count');
+                if (mobileWishlistCount) mobileWishlistCount.textContent = wishlistCount;
+                if (mobileCartCount) mobileCartCount.textContent = cartCount;
+            };
+
+            // Make functions globally accessible
+            window.addToWishlist = addToWishlist;
+            window.addToCart = addToCart;
+
+            // Initial count update on page load
+            updateHeaderCounts();
+        });
+    </script>
 </body>
 </html>

@@ -38,12 +38,22 @@
                 </div>
 
                 <!-- Desktop navigation -->
-                <div class="hidden md:block">
+                <div class="hidden md:flex items-center">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="{{ url('/') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'home') active @endif">Home</a>
                         <a href="{{ url('/products') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'products') active @endif">Products</a>
                         <a href="{{ url('/about') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'about') active @endif">About</a>
                         <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                    </div>
+                    <div class="ml-6 flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-orange-600 relative">
+                            <i class="fas fa-heart text-xl"></i>
+                            <span id="wishlist-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600 relative">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -55,6 +65,17 @@
                     <a href="{{ url('/products') }}" class="nav-link-mobile block px-3 py-2 text-base font-medium @if($page === 'products') active @endif">Products</a>
                     <a href="{{ url('/about') }}" class="nav-link-mobile block px-3 py-2 text-base font-medium @if($page === 'about') active @endif">About</a>
                     <a href="#" class="block px-3 py-2 text-base font-medium text-orange-600">Contact</a>
+                    <div class="border-t border-gray-200 my-2"></div>
+                    <div class="flex justify-center space-x-6 py-2">
+                        <a href="#" class="text-gray-600 hover:text-orange-600 relative">
+                            <i class="fas fa-heart text-2xl"></i>
+                            <span id="mobile-wishlist-count" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600 relative">
+                            <i class="fas fa-shopping-cart text-2xl"></i>
+                            <span id="mobile-cart-count" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
