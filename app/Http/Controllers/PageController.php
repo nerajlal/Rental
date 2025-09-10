@@ -42,4 +42,24 @@ class PageController extends BaseController
             'similarProducts' => $similarProducts,
         ]);
     }
+
+    public function wishlist()
+    {
+        return view('wishlist', [
+            'siteConfig' => $this->getSiteConfig(),
+            'page' => 'wishlist',
+        ]);
+    }
+
+    public function getProductsByIds(Request $request)
+    {
+        $ids = $request->input('ids', []);
+        if (empty($ids)) {
+            return response()->json([]);
+        }
+
+        $products = Product::whereIn('id', $ids)->with('images')->get();
+
+        return response()->json($products);
+    }
 }
