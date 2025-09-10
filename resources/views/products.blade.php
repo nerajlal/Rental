@@ -10,10 +10,14 @@
                 <!-- Categories -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
                     <button class="category-filter active bg-orange-600 text-white px-6 py-2 rounded-full font-medium" data-category="all">All Categories</button>
-                    <button class="category-filter bg-gray-200 text-gray-700 hover:bg-gray-300 px-6 py-2 rounded-full font-medium transition duration-300" data-category="wedding">Wedding</button>
-                    <button class="category-filter bg-gray-200 text-gray-700 hover:bg-gray-300 px-6 py-2 rounded-full font-medium transition duration-300" data-category="corporate">Corporate</button>
-                    <button class="category-filter bg-gray-200 text-gray-700 hover:bg-gray-300 px-6 py-2 rounded-full font-medium transition duration-300" data-category="party">Party</button>
-                    <button class="category-filter bg-gray-200 text-gray-700 hover:bg-gray-300 px-6 py-2 rounded-full font-medium transition duration-300" data-category="holiday">Holiday</button>
+                    @php
+                        $categories = $products->pluck('category')->unique();
+                    @endphp
+                    @foreach($categories as $category)
+                        @if($category)
+                            <button class="category-filter bg-gray-200 text-gray-700 hover:bg-gray-300 px-6 py-2 rounded-full font-medium transition duration-300" data-category="{{ strtolower(str_replace(' ', '-', $category)) }}">{{ $category }}</button>
+                        @endif
+                    @endforeach
                 </div>
 
                 <!-- Product Grid -->
