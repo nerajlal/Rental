@@ -14,11 +14,6 @@ class AdminController extends BaseController
         return view('admin.index', ['siteConfig' => $this->getSiteConfig(), 'page' => 'dashboard']);
     }
 
-    public function products()
-    {
-        return view('admin.products', ['siteConfig' => $this->getSiteConfig(), 'page' => 'products']);
-    }
-
     public function orders()
     {
         return view('admin.orders', ['siteConfig' => $this->getSiteConfig(), 'page' => 'orders']);

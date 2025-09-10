@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProductController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,11 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        // This will be used to pass data to the view.
-        // For now, we just fetch them. The view needs to be updated first.
-        return view('admin.products', compact('products'));
+        return view('admin.products', [
+            'siteConfig' => $this->getSiteConfig(),
+            'page' => 'products',
+            'products' => $products
+        ]);
     }
 
     /**
