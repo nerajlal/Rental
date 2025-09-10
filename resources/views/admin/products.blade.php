@@ -1,3 +1,6 @@
+@php
+use Illuminate\Support\Facades\Storage;
+@endphp
 @include('admin.header')
 @include('admin.sidebar')
 
@@ -28,7 +31,7 @@
                     @forelse ($products as $product)
                         <div class="bg-white p-4 rounded-lg shadow-sm border flex flex-col justify-between">
                             <div>
-                                <img src="{{ $product->image_url ?? 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-32 object-cover rounded-md mb-4">
+                                <img src="{{ $product->images->first() ? Storage::url($product->images->first()->image_path) : 'https://via.placeholder.com/150/d1d5db/4b5563?text=No+Image' }}" alt="{{ $product->name }}" class="w-full h-32 object-cover rounded-md mb-4">
                                 <h4 class="font-semibold text-md mb-1">{{ $product->name }}</h4>
                                 <p class="text-sm text-gray-600 mb-2">{{ $product->category }} / {{ $product->subcategory }}</p>
                                 <p class="text-xs text-gray-500 mb-2">Weight: {{ $product->weight ?? 'N/A' }}</p>
@@ -54,7 +57,7 @@
     <div id="add-product-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 modal-overlay">
         <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-2xl fade-in">
             <h2 class="text-2xl font-bold mb-6">Add New Product</h2>
-            <form method="POST" action="{{ route('admin.products.store') }}" class="space-y-4">
+            <form method="POST" action="{{ route('admin.products.store') }}" class="space-y-4" enctype="multipart/form-data">
                 @csrf
                 <div>
                     <label for="product-name" class="block text-sm font-medium text-gray-700">Product Name</label>
@@ -110,6 +113,11 @@
                 <div>
                     <label for="product-description" class="block text-sm font-medium text-gray-700">Description</label>
                     <textarea id="product-description" name="description" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                </div>
+
+                <div>
+                    <label for="product-images" class="block text-sm font-medium text-gray-700">Product Images (WEBP only, max 5MB)</label>
+                    <input type="file" id="product-images" name="images[]" multiple accept="image/webp" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
                 </div>
 
                 <div class="flex justify-end space-x-4 pt-4">

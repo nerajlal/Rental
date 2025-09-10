@@ -16,7 +16,11 @@ class Product extends Model
         'category',
         'subcategory',
         'weight',
-        'image_url',
         'stock',
     ];
+
+    public function images()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
 }

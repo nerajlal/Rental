@@ -39,9 +39,18 @@ class ProductController extends Controller
             'subcategory' => 'required|string',
             'weight' => 'nullable|string',
             'description' => 'nullable|string',
+            'images' => 'nullable|array',
+            'images.*' => 'image|mimetypes:image/webp|max:5120', // 5MB max
         ]);
 
-        Product::create($request->all());
+        $product = Product::create($request->except('images'));
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('product_images', 'public');
+                $product->images()->create(['image_path' => $path]);
+            }
+        }
 
         return back()->with('success', 'Product added successfully.');
     }
