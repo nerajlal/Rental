@@ -14,14 +14,11 @@ use Illuminate\Support\Facades\Route;
 
 // Main site routes
 Route::get('/', [PageController::class, 'home']);
-Route::get('/products', [PageController::class, 'products'])->name('products.index');
-Route::get('/products/{product}', [PageController::class, 'showProduct'])->name('products.show');
+Route::get('/products', [PageController::class, 'products']);
 Route::get('/about', [PageController::class, 'about']);
-Route::get('/wishlist', [PageController::class, 'wishlist'])->name('wishlist.index');
-Route::post('/products-by-ids', [PageController::class, 'getProductsByIds'])->name('products.byIds');
-
-// Public image route
-Route::get('/product-image/{imageName}', [ProductController::class, 'getProductImage'])->name('product.image');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact.index');
+Route::post('/contact', [PageController::class, 'handleContactForm'])->name('contact.submit');
+Route::get('/single-product', [PageController::class, 'singleProduct']);
 
 // Admin Auth routes
 Route::post('/admin/login', [LoginController::class, 'login'])->name('admin.login');
@@ -35,8 +32,6 @@ Route::middleware(['auth.admin'])->prefix('admin')->group(function () {
     // Product Routes
     Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
     Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
-    Route::get('/products/{product}', [ProductController::class, 'show'])->name('admin.products.show');
-    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
 
     Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders.index');
     Route::get('/customers', [AdminController::class, 'customers'])->name('admin.customers.index');

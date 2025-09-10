@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BaseController;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Storage;
 
 class ProductController extends BaseController
 {
@@ -62,9 +60,9 @@ class ProductController extends BaseController
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(string $id)
     {
-        return response()->json($product->load('images'));
+        //
     }
 
     /**
@@ -86,44 +84,8 @@ class ProductController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(string $id)
     {
-        // Delete associated images from storage
-        foreach ($product->images as $image) {
-            Storage::disk('public')->delete($image->image_path);
-        }
-
-        // Delete the product from the database
-        $product->delete();
-
-        return response()->json(['success' => 'Product deleted successfully.']);
-    }
-
-    /**
-     * Get a product image from storage.
-     *
-     * This method serves images directly from the 'storage/app/public' disk.
-     * It is used as a workaround because the standard `php artisan storage:link`
-     * command could not be run in the deployment environment, preventing direct
-     * public access to the `storage` directory.
-     *
-     * @param string $imageName
-     * @return \Illuminate\Http\Response
-     */
-    public function getProductImage($imageName)
-    {
-        $path = 'product_images/' . $imageName;
-
-        if (!Storage::disk('public')->exists($path)) {
-            abort(404);
-        }
-
-        $file = Storage::disk('public')->get($path);
-        $type = Storage::disk('public')->mimeType($path);
-
-        $response = Response::make($file, 200);
-        $response->header("Content-Type", $type);
-
-        return $response;
+        //
     }
 }

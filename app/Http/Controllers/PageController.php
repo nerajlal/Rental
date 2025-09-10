@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 
 class PageController extends BaseController
 {
@@ -14,12 +15,7 @@ class PageController extends BaseController
 
     public function products()
     {
-        $products = Product::with('images')->get();
-        return view('products', [
-            'siteConfig' => $this->getSiteConfig(),
-            'page' => 'products',
-            'products' => $products,
-        ]);
+        return view('products', ['siteConfig' => $this->getSiteConfig(), 'page' => 'products']);
     }
 
     public function about()
@@ -27,39 +23,31 @@ class PageController extends BaseController
         return view('about', ['siteConfig' => $this->getSiteConfig(), 'page' => 'about']);
     }
 
-    public function showProduct(Product $product)
+    public function singleProduct()
     {
-        $similarProducts = Product::where('category', $product->category)
-            ->where('id', '!=', $product->id)
-            ->with('images')
-            ->limit(4)
-            ->get();
-
-        return view('single-product', [
-            'siteConfig' => $this->getSiteConfig(),
-            'page' => 'single-product',
-            'product' => $product,
-            'similarProducts' => $similarProducts,
-        ]);
+        return view('single-product', ['siteConfig' => $this->getSiteConfig(), 'page' => 'single-product']);
     }
 
-    public function wishlist()
+    public function contact()
     {
-        return view('wishlist', [
-            'siteConfig' => $this->getSiteConfig(),
-            'page' => 'wishlist',
-        ]);
+        return view('contact', ['siteConfig' => $this->getSiteConfig(), 'page' => 'contact']);
     }
 
-    public function getProductsByIds(Request $request)
+    public function handleContactForm(Request $request)
     {
-        $ids = $request->input('ids', []);
-        if (empty($ids)) {
-            return response()->json([]);
-        }
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
 
-        $products = Product::whereIn('id', $ids)->with('images')->get();
+        // Note: The admin email should ideally be in a config file.
+        // Using the one from siteConfig for now.
+        $adminEmail = $this->getSiteConfig()['business']['email'];
 
-        return response()->json($products);
+        Mail::to($adminEmail)->send(new ContactFormMail($validatedData));
+
+        return redirect()->route('contact.index')->with('success', 'Thank you for your message! We will get back to you shortly.');
     }
 }
