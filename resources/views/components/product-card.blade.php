@@ -21,7 +21,7 @@
         </h3>
         <div class="mt-auto">
             <div class="flex justify-between items-center">
-                <span class="text-xl font-bold text-gray-900">${{ number_format($product->price, 2) }}<span class="text-sm font-normal text-gray-500">/day</span></span>
+                <span class="text-xl font-bold text-gray-900">₹{{ number_format($product->price, 2) }}<span class="text-sm font-normal text-gray-500">/day</span></span>
                 <a href="{{ route('products.show', $product) }}" class="product-details bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition duration-300">
                     Details
                 </a>

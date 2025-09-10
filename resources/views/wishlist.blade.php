@@ -97,7 +97,7 @@
                     cardClone.querySelector('.wishlist-toggle-btn').dataset.productId = product.id;
                     cardClone.querySelector('.wishlist-toggle-btn').onclick = () => toggleWishlist(product.id, cardClone.querySelector('.wishlist-toggle-btn'));
                     cardClone.querySelector('.product-name').textContent = product.name;
-                    cardClone.querySelector('.product-price').innerHTML = `$${parseFloat(product.price).toFixed(2)}<span class="text-sm font-normal text-gray-500">/day</span>`;
+                    cardClone.querySelector('.product-price').innerHTML = `₹${parseFloat(product.price).toFixed(2)}<span class="text-sm font-normal text-gray-500">/day</span>`;
 
                     container.appendChild(cardClone);
                 });

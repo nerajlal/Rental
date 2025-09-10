@@ -27,7 +27,7 @@
                         <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ $product->name }}</h1>
 
                         <div class="flex items-center mb-4">
-                            <span class="text-3xl font-bold text-orange-600">${{ number_format($product->price, 2) }}</span>
+                            <span class="text-3xl font-bold text-orange-600">₹{{ number_format($product->price, 2) }}</span>
                             <span class="text-xl text-gray-500 ml-2">/ day</span>
                         </div>
 
@@ -41,16 +41,20 @@
                                 <h4 class="font-semibold text-gray-700">Category</h4>
                                 <p class="text-gray-600">{{ $product->category }}</p>
                             </div>
+                            <!--
                             <div>
                                 <h4 class="font-semibold text-gray-700">Subcategory</h4>
                                 <p class="text-gray-600">{{ $product->subcategory }}</p>
                             </div>
+                            -->
+                            <!--
                             @if($product->weight)
                             <div>
                                 <h4 class="font-semibold text-gray-700">Weight</h4>
                                 <p class="text-gray-600">{{ $product->weight }}</p>
                             </div>
                             @endif
+                            -->
                         </div>
 
                         <!-- Action Buttons -->
