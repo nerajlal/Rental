@@ -29,4 +29,5 @@ Route::middleware(['auth.admin'])->prefix('admin')->group(function () {
     Route::get('/orders', [AdminController::class, 'orders']);
     Route::get('/customers', [AdminController::class, 'customers']);
     Route::get('/settings', [AdminController::class, 'settings']);
+    Route::post('/settings/password', [AdminController::class, 'updatePassword']);
 });
