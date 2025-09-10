@@ -1,3 +1,5 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 .card-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
