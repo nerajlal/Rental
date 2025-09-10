@@ -59,6 +59,12 @@
                     <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
                         <i class="fas fa-user w-5 h-5 text-gray-600"></i>
                     </div>
+                    <form method="POST" action="{{ route('admin.logout') }}">
+                        @csrf
+                        <button type="submit" class="p-2 text-gray-600 hover:text-gray-800">
+                            <i class="fas fa-sign-out-alt w-6 h-6"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>
