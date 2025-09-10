@@ -30,6 +30,7 @@ Route::middleware(['auth.admin'])->prefix('admin')->group(function () {
     // Product Routes
     Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
     Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
+    Route::get('/product-image/{imageName}', [ProductController::class, 'getProductImage'])->name('admin.product.image');
 
     Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders.index');
     Route::get('/customers', [AdminController::class, 'customers'])->name('admin.customers.index');

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BaseController;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends BaseController
 {
@@ -87,5 +89,22 @@ class ProductController extends BaseController
     public function destroy(string $id)
     {
         //
+    }
+
+    public function getProductImage($imageName)
+    {
+        $path = 'product_images/' . $imageName;
+
+        if (!Storage::disk('public')->exists($path)) {
+            abort(404);
+        }
+
+        $file = Storage::disk('public')->get($path);
+        $type = Storage::disk('public')->mimeType($path);
+
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+
+        return $response;
     }
 }
