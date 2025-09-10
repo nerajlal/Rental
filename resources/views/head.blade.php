@@ -43,7 +43,7 @@
                         <a href="{{ url('/') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'home') active @endif">Home</a>
                         <a href="{{ url('/products') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'products') active @endif">Products</a>
                         <a href="{{ url('/about') }}" class="nav-link px-3 py-2 text-sm font-medium @if($page === 'about') active @endif">About</a>
-                        <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                        <a href="{{ url('/contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
                     </div>
                     <div class="ml-6 flex items-center space-x-4">
                         <a href="{{ route('wishlist.index') }}" class="text-gray-600 hover:text-orange-600 relative">
