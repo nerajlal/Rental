@@ -58,12 +58,8 @@
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button onclick="addToCart({{ $product->id }})" class="w-full bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center gap-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Add to Cart</span>
-                            </button>
-                            <button onclick="addToWishlist({{ $product->id }})" class="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center gap-2">
+                        <div class="flex flex-col gap-4">
+                            <button onclick="toggleWishlist({{ $product->id }}, this)" class="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center gap-2 wishlist-toggle-btn" data-product-id="{{ $product->id }}">
                                 <i class="far fa-heart"></i>
                                 <span>Add to Wishlist</span>
                             </button>

@@ -99,6 +99,17 @@ class ProductController extends BaseController
         return response()->json(['success' => 'Product deleted successfully.']);
     }
 
+    /**
+     * Get a product image from storage.
+     *
+     * This method serves images directly from the 'storage/app/public' disk.
+     * It is used as a workaround because the standard `php artisan storage:link`
+     * command could not be run in the deployment environment, preventing direct
+     * public access to the `storage` directory.
+     *
+     * @param string $imageName
+     * @return \Illuminate\Http\Response
+     */
     public function getProductImage($imageName)
     {
         $path = 'product_images/' . $imageName;

@@ -132,31 +132,17 @@
                 });
             };
 
-            const addToCart = (productId) => {
-                let cart = getStorage('cart');
-                // For simplicity, we'll just store product IDs. A real cart would store quantity too.
-                if (!cart.includes(productId)) {
-                    cart.push(productId);
-                    updateStorage('cart', cart);
-                }
-            };
-
             const updateHeaderCounts = () => {
                 const wishlistCount = getStorage('wishlist').length;
-                const cartCount = getStorage('cart').length;
 
                 document.getElementById('wishlist-count').textContent = wishlistCount;
-                document.getElementById('cart-count').textContent = cartCount;
 
                 const mobileWishlistCount = document.getElementById('mobile-wishlist-count');
-                const mobileCartCount = document.getElementById('mobile-cart-count');
                 if (mobileWishlistCount) mobileWishlistCount.textContent = wishlistCount;
-                if (mobileCartCount) mobileCartCount.textContent = cartCount;
             };
 
             // Make functions globally accessible
             window.toggleWishlist = toggleWishlist;
-            window.addToCart = addToCart;
 
             // Initial count and icon update on page load
             updateHeaderCounts();

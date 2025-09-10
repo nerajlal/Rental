@@ -22,10 +22,38 @@
         </section>
     </main>
 
+    <template id="product-card-template">
+        <div class="product-card-container">
+            <div class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <div class="h-56 relative">
+                    <a href="#" class="product-link block w-full h-full">
+                        <img src="" alt="" class="product-image w-full h-full object-cover">
+                    </a>
+                    <div class="product-category absolute top-2 left-2 bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full"></div>
+                    <button class="wishlist-toggle-btn absolute top-2 right-2 bg-white rounded-full p-2 transition-colors duration-300 hover:bg-red-100">
+                        <i class="far fa-heart text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800 flex-grow">
+                        <a href="#" class="product-link product-name hover:text-orange-600 transition-colors"></a>
+                    </h3>
+                    <div class="mt-auto">
+                        <div class="flex justify-between items-center">
+                            <span class="product-price text-xl font-bold text-gray-900"></span>
+                            <a href="#" class="product-link product-details bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition duration-300">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
     <script>
         document.addEventListener('DOMContentLoaded', async function() {
             const container = document.getElementById('wishlist-container');
             const emptyMessage = document.getElementById('wishlist-empty');
+            const cardTemplate = document.getElementById('product-card-template');
             const wishlistIds = JSON.parse(localStorage.getItem('wishlist')) || [];
 
             if (wishlistIds.length === 0) {
@@ -54,46 +82,25 @@
                     return;
                 }
 
-                let productsHtml = '';
+                container.innerHTML = ''; // Clear previous content
+
                 products.forEach(product => {
+                    const cardClone = cardTemplate.content.cloneNode(true);
+
                     const imageUrl = product.images.length > 0 ? `{{ url('/product-image') }}/${product.images[0].image_path.split('/').pop()}` : 'https://via.placeholder.com/300x300/d1d5db/4b5563?text=No+Image';
                     const productUrl = `{{ url('/products') }}/${product.id}`;
 
-                    productsHtml += `
-                        <div class="product-card-container">
-                            <div class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                                <div class="h-56 relative">
-                                    <a href="${productUrl}" class="block w-full h-full">
-                                        <img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover">
-                                    </a>
-                                    <div class="absolute top-2 left-2 bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                        ${product.category}
-                                    </div>
-                                    <button onclick="toggleWishlist(${product.id}, this)" data-product-id="${product.id}" class="wishlist-toggle-btn absolute top-2 right-2 bg-white rounded-full p-2 transition-colors duration-300 hover:bg-red-100">
-                                        <i class="far fa-heart text-gray-700 text-xl"></i>
-                                    </button>
-                                </div>
-                                <div class="p-4 flex flex-col flex-grow">
-                                    <h3 class="font-semibold text-lg mb-2 text-gray-800 flex-grow">
-                                        <a href="${productUrl}" class="hover:text-orange-600 transition-colors">
-                                            ${product.name}
-                                        </a>
-                                    </h3>
-                                    <div class="mt-auto">
-                                        <div class="flex justify-between items-center">
-                                            <span class="text-xl font-bold text-gray-900">$${parseFloat(product.price).toFixed(2)}<span class="text-sm font-normal text-gray-500">/day</span></span>
-                                            <a href="${productUrl}" class="product-details bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition duration-300">
-                                                Details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                });
+                    cardClone.querySelector('.product-image').src = imageUrl;
+                    cardClone.querySelector('.product-image').alt = product.name;
+                    cardClone.querySelectorAll('.product-link').forEach(link => link.href = productUrl);
+                    cardClone.querySelector('.product-category').textContent = product.category;
+                    cardClone.querySelector('.wishlist-toggle-btn').dataset.productId = product.id;
+                    cardClone.querySelector('.wishlist-toggle-btn').onclick = () => toggleWishlist(product.id, cardClone.querySelector('.wishlist-toggle-btn'));
+                    cardClone.querySelector('.product-name').textContent = product.name;
+                    cardClone.querySelector('.product-price').innerHTML = `$${parseFloat(product.price).toFixed(2)}<span class="text-sm font-normal text-gray-500">/day</span>`;
 
-                container.innerHTML = productsHtml;
+                    container.appendChild(cardClone);
+                });
 
                 // Dispatch a custom event to let the main script know new content has been added
                 document.dispatchEvent(new CustomEvent('dynamicContentLoaded'));

@@ -50,10 +50,6 @@
                             <i class="fas fa-heart text-xl"></i>
                             <span id="wishlist-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                         </a>
-                        <a href="#" class="text-gray-600 hover:text-orange-600 relative">
-                            <i class="fas fa-shopping-cart text-xl"></i>
-                            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -70,10 +66,6 @@
                         <a href="{{ route('wishlist.index') }}" class="text-gray-600 hover:text-orange-600 relative">
                             <i class="fas fa-heart text-2xl"></i>
                             <span id="mobile-wishlist-count" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-orange-600 relative">
-                            <i class="fas fa-shopping-cart text-2xl"></i>
-                            <span id="mobile-cart-count" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                         </a>
                     </div>
                 </div>
