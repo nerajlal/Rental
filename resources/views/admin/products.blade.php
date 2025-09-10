@@ -272,6 +272,21 @@ document.addEventListener("DOMContentLoaded", () => {
             closeModal(editProductModal);
         }
     });
+
+    // Handle Edit form submission to show upgrade modal
+    editProductForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        closeModal(editProductModal);
+        openModal(document.getElementById('upgrade-modal'));
+    });
+
+    // Close Upgrade modal
+    const upgradeModal = document.getElementById('upgrade-modal');
+    upgradeModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay') || e.target.id === 'cancel-upgrade-modal') {
+            closeModal(upgradeModal);
+        }
+    });
 });
 </script>
     
