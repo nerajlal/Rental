@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,7 @@ Route::get('/products', [PageController::class, 'products'])->name('products.ind
 Route::get('/products/{product}', [PageController::class, 'showProduct'])->name('products.show');
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact', [PageController::class, 'contact']);
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::get('/wishlist', [PageController::class, 'wishlist'])->name('wishlist.index');
 Route::post('/products-by-ids', [PageController::class, 'getProductsByIds'])->name('products.byIds');
 
