@@ -12,6 +12,11 @@ class PageController extends BaseController
         return view('index', ['siteConfig' => $this->getSiteConfig(), 'page' => 'home']);
     }
 
+    public function test()
+    {
+        return view('test', ['siteConfig' => $this->getSiteConfig(), 'page' => 'test']);
+    }
+
     public function products()
     {
         $products = Product::with('images')->get();
