@@ -13,7 +13,8 @@ class BaseController extends Controller
                 'email' => 'test@ornamentrentals.com',
                 'address' => 'Test Event Street, City, State 12345',
                 'whatsapp' => '+91 85474 70675',
-                'instagram' => 'https://instagram.com/metora.in'
+                'instagram' => 'https://instagram.com/metora.in',
+                'expiry_date' => '12-03-2026'
             ],
             'colors' => [
                 'primary' => '#c2410c',
