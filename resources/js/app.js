@@ -139,6 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    document.getElementById('analytics-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('upgrade-btn').click(); // Reuse upgrade popup
+});
+
+
     // --- Modal Control ---
     const openModal = (modal) => modal && modal.classList.remove('hidden');
     const closeModal = (modal) => modal && modal.classList.add('hidden');

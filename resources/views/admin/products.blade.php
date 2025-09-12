@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Storage;
                             <div class="mt-4">
                                 <div class="flex items-center justify-between text-sm">
                                     <span class="font-bold text-gray-800">${{ number_format($product->price, 2) }}</span>
-                                    <span class="text-gray-600">Stock: {{ $product->stock }}</span>
+                                    <!-- <span class="text-gray-600">Stock: {{ $product->stock }}</span> -->
                                 </div>
                                 <div class="flex items-center justify-between mt-3 space-x-2">
                                     <button class="edit-product-btn w-full bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-xs font-medium transition" data-id="{{ $product->id }}">Edit</button>

@@ -52,7 +52,6 @@
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Product 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                         <div class="relative h-64 bg-gradient-to-br from-pink-200 to-purple-300 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -65,12 +64,13 @@
                             <p class="text-gray-600 mb-4">Elegant centerpieces, crystal chandeliers, and premium table settings for your perfect wedding day.</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-orange-600 font-bold text-xl">From ₹2,500/day</span>
-                                <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                <a href="products">
+                                    <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 3 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                         <div class="relative h-64 bg-gradient-to-br from-green-200 to-emerald-300 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -83,25 +83,28 @@
                             <p class="text-gray-600 mb-4">Colorful balloon arrangements, themed decorations, and fun party essentials for memorable celebrations.</p>
                             <div class="flex items-center justify-between">
                                 <span class="text-orange-600 font-bold text-xl">From ₹1,200/day</span>
-                                <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                <a href="products">
+                                    <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                        <div class="relative h-64 bg-gradient-to-br from-red-200 to-pink-300 overflow-hidden">
+                        <div class="relative h-64 bg-gradient-to-br from-yellow-200 to-orange-300 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <i class="fas fa-heart text-6xl text-white opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
+                                <i class="fas fa-hands-praying text-6xl text-white opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
                             </div>
-                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Romantic</div>
+                            <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">New</div>
                         </div>
                         <div class="p-6">
-                            <h4 class="text-2xl font-bold mb-2 text-gray-800">Anniversary Specials</h4>
-                            <p class="text-gray-600 mb-4">Romantic setups with candles, flowers, and elegant decorations for intimate celebrations.</p>
+                            <h4 class="text-2xl font-bold mb-2 text-gray-800">Traditional Ceremonies</h4>
+                            <p class="text-gray-600 mb-4">Authentic and ornate decorations to honor timeless traditions.</p>
                             <div class="flex items-center justify-between">
-                                <span class="text-orange-600 font-bold text-xl">From ₹999/day</span>
-                                <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                <span class="text-orange-600 font-bold text-xl">From ₹1,800/day</span>
+                                <a href="products">
+                                    <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -283,110 +286,60 @@
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
                     <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Perfect for Every <span class="text-orange-600">Occasion</span></h3>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">From intimate gatherings to grand celebrations, we have the perfect decorations for every event</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">From intimate gatherings to grand celebrations, we have the perfect jewelry for every event.</p>
                     <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                     <div class="text-center group cursor-pointer">
                         <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-pink-100 to-red-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-ring text-3xl text-pink-600"></i>
+                            <i class="fas fa-gem text-3xl text-pink-600"></i>
                         </div>
-                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Weddings</h4>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Wedding Jewelry</h4>
                     </div>
 
                     <div class="text-center group cursor-pointer">
                         <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-birthday-cake text-3xl text-blue-600"></i>
+                            <i class="fas fa-hand-holding-heart text-3xl text-blue-600"></i>
                         </div>
-                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Birthdays</h4>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Engagement Jewelry</h4>
                     </div>
 
                     <div class="text-center group cursor-pointer">
                         <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-building text-3xl text-purple-600"></i>
+                            <i class="fas fa-cocktail text-3xl text-purple-600"></i>
                         </div>
-                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Corporate</h4>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Party Jewelry</h4>
                     </div>
 
                     <div class="text-center group cursor-pointer">
                         <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-heart text-3xl text-green-600"></i>
+                            <i class="fas fa-gopuram text-3xl text-green-600"></i>
                         </div>
-                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Anniversary</h4>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Traditional Jewelry</h4>
                     </div>
 
                     <div class="text-center group cursor-pointer">
                         <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-star text-3xl text-yellow-600"></i>
+                            <i class="fas fa-crown text-3xl text-yellow-600"></i>
                         </div>
-                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Festivals</h4>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Bridal Jewelry Sets</h4>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-100 to-pink-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-graduation-cap text-3xl text-red-600"></i>
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-shopping-bag text-3xl text-teal-600"></i>
                         </div>
-                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Graduation</h4>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Daily Wear Jewelry</h4>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="py-20 px-4 bg-gradient-to-br from-gray-50 to-orange-50">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Flexible <span class="text-orange-600">Pricing</span></h3>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Starting from just ₹100 per day - rent individual items or choose complete packages for your perfect event</p>
-                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
-                </div>
+        <!-- Pricing Section -->  
 
-                <!-- Individual Items Starting From -->
-                <div class="mb-16">
-                    <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 border border-orange-100 shadow-lg">
-                        <div class="text-center">
-                            <h4 class="text-2xl font-bold text-gray-800 mb-4">Individual Items Starting From</h4>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                <div class="text-center">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-pink-200 to-red-200 rounded-2xl mx-auto mb-3 flex items-center justify-center">
-                                        <i class="fas fa-chair text-2xl text-pink-600"></i>
-                                    </div>
-                                    <p class="text-sm text-gray-600 mb-1">Chairs & Tables</p>
-                                    <p class="font-bold text-orange-600">₹50/day</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-2xl mx-auto mb-3 flex items-center justify-center">
-                                        <i class="fas fa-lightbulb text-2xl text-blue-600"></i>
-                                    </div>
-                                    <p class="text-sm text-gray-600 mb-1">Lighting</p>
-                                    <p class="font-bold text-orange-600">₹200/day</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-green-200 to-emerald-200 rounded-2xl mx-auto mb-3 flex items-center justify-center">
-                                        <i class="fas fa-seedling text-2xl text-green-600"></i>
-                                    </div>
-                                    <p class="text-sm text-gray-600 mb-1">Flowers & Plants</p>
-                                    <p class="font-bold text-orange-600">₹150/day</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl mx-auto mb-3 flex items-center justify-center">
-                                        <i class="fas fa-magic text-2xl text-purple-600"></i>
-                                    </div>
-                                    <p class="text-sm text-gray-600 mb-1">Centerpieces</p>
-                                    <p class="font-bold text-orange-600">₹300/day</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Complete Packages -->
-                
-
-                <!-- Custom Pricing Note -->
-                <div class="text-center mt-16">
-                    <div class="bg-gradient-to-r from-orange-100 to-red-100 rounded-2xl p-8 max-w-4xl mx-auto">
+        <div class="text-center mt-16">
+            <div class="bg-gradient-to-r from-orange-100 to-red-100 rounded-2xl p-8 max-w-4xl mx-auto">
                         <h4 class="text-2xl font-bold text-gray-800 mb-4">Flexible & Transparent Pricing</h4>
                         <p class="text-gray-700 text-lg mb-6">Every event is unique, and so are our prices. We offer completely customized quotes based on your specific needs, event size, location, and duration. No hidden fees, no surprises.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -399,7 +352,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            <div>.</div>
 
         @include('footer')
