@@ -2,15 +2,175 @@
 
     <!-- Main Content -->
     <main class="pt-16" id="main-content">
-        <!-- Home Page Content -->
         <!-- Hero Section -->
-        <section class="hero-gradient text-white py-20 px-4">
-            <div class="max-w-7xl mx-auto text-center">
+        <section class="hero-gradient text-white py-20 px-4 relative overflow-hidden">
+            <!-- Floating decorative elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-4 h-4 bg-white rounded-full animate-pulse"></div>
+                <div class="absolute top-32 right-20 w-6 h-6 bg-white/70 rounded-full animate-bounce"></div>
+                <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-white/50 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-32 right-1/3 w-5 h-5 bg-white/60 rounded-full animate-bounce"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto text-center relative z-10">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6" id="hero-title">Transform Your Events with Elegant Decorations</h2>
                 <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Premium ornament rentals for weddings, corporate events, parties, and special occasions. Make every moment memorable with our exquisite collection.</p>
                 <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
                     <button class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 w-full md:w-auto">Browse Products</button>
                     <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition duration-300 w-full md:w-auto">Get Quote</button>
+                </div>
+                
+                <!-- Stats counter -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold mb-2">500+</div>
+                        <div class="text-sm md:text-base opacity-90">Happy Clients</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold mb-2">1000+</div>
+                        <div class="text-sm md:text-base opacity-90">Events Decorated</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold mb-2">200+</div>
+                        <div class="text-sm md:text-base opacity-90">Premium Items</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold mb-2">5+</div>
+                        <div class="text-sm md:text-base opacity-90">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="py-20 px-4 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Our Favorite <span class="text-orange-600">Collections</span></h3>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover our most popular and stunning decorative pieces that will transform your events into unforgettable experiences.</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative h-64 bg-gradient-to-br from-pink-200 to-purple-300 overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-crown text-6xl text-white opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Popular</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-2 text-gray-800">Luxury Wedding Sets</h4>
+                            <p class="text-gray-600 mb-4">Elegant centerpieces, crystal chandeliers, and premium table settings for your perfect wedding day.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-orange-600 font-bold text-xl">From ₹2,500/day</span>
+                                <a href="products">
+                                    <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative h-64 bg-gradient-to-br from-green-200 to-emerald-300 overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-birthday-cake text-6xl text-white opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Trending</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-2 text-gray-800">Birthday Party Themes</h4>
+                            <p class="text-gray-600 mb-4">Colorful balloon arrangements, themed decorations, and fun party essentials for memorable celebrations.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-orange-600 font-bold text-xl">From ₹1,200/day</span>
+                                <a href="products">
+                                    <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative h-64 bg-gradient-to-br from-yellow-200 to-orange-300 overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-hands-praying text-6xl text-white opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">New</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-2 text-gray-800">Traditional Ceremonies</h4>
+                            <p class="text-gray-600 mb-4">Authentic and ornate decorations to honor timeless traditions.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-orange-600 font-bold text-xl">From ₹1,800/day</span>
+                                <a href="products">
+                                    <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="/products">
+                        <button class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            View All Products
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-20 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">How It <span class="text-orange-600">Works</span></h3>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Simple steps to get the perfect decorations for your event</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center relative">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg">
+                            1
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Browse & Select</h4>
+                        <p class="text-gray-600">Explore our extensive collection of decorations and choose items that match your event theme and budget.</p>
+                        <!-- Arrow for desktop -->
+                        <div class="hidden md:block absolute top-10 -right-4 text-orange-300 text-2xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="text-center relative">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg">
+                            2
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Get Quote</h4>
+                        <p class="text-gray-600">Contact us with your requirements and receive a personalized quote with transparent pricing for your selected items.</p>
+                        <div class="hidden md:block absolute top-10 -right-4 text-blue-300 text-2xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="text-center relative">
+                        <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg">
+                            3
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Book & Confirm</h4>
+                        <p class="text-gray-600">Confirm your booking with advance payment and schedule delivery and setup according to your event timeline.</p>
+                        <div class="hidden md:block absolute top-10 -right-4 text-emerald-300 text-2xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg">
+                            4
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Enjoy Your Event</h4>
+                        <p class="text-gray-600">Sit back and enjoy your perfectly decorated event while we handle setup, maintenance, and pickup after the event.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -45,279 +205,157 @@
             </div>
         </section>
 
-        <!-- Team Section -->
-        <section class="py-16 px-4 bg-white">
-            <div class="max-w-6xl mx-auto">
-                <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Expert Team</h3>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center">
-                        <div class="w-32 h-32 bg-gradient-to-br from-orange-200 to-pink-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <i class="fas fa-user-tie text-5xl text-orange-600"></i>
+        <!-- Customer Testimonials Section -->
+        <section class="py-20 px-4 bg-gradient-to-br from-orange-50 to-red-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">What Our <span class="text-orange-600">Clients Say</span></h3>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                P
                             </div>
-                            <h4 class="text-xl font-semibold mb-2">Event Specialists</h4>
-                            <p class="text-gray-600">Our team of experienced event specialists help you choose the perfect decorations for your occasion.</p>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Priya Sharma</h4>
+                                <p class="text-gray-600 text-sm">Wedding Client</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-paint-brush text-5xl text-blue-600"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold mb-2">Design Consultants</h4>
-                            <p class="text-gray-600">Professional designers who understand color schemes, themes, and spatial arrangements to maximize visual impact.</p>
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-truck text-5xl text-emerald-600"></i>
+                        <p class="text-gray-700 italic">"Absolutely stunning decorations for our wedding! The team was professional, punctual, and everything was exactly as promised. Our guests couldn't stop complimenting the beautiful setup."</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                R
                             </div>
-                            <h4 class="text-xl font-semibold mb-2">Logistics Team</h4>
-                            <p class="text-gray-600">Reliable delivery and setup professionals ensure your decorations arrive on time and are perfectly arranged.</p>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Rajesh Kumar</h4>
+                                <p class="text-gray-600 text-sm">Corporate Event</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic">"Perfect for our company's annual event. The modern decor and professional setup impressed all our clients and employees. Great value for money and excellent service!"</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-green-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                A
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-800">Anita Patel</h4>
+                                <p class="text-gray-600 text-sm">Birthday Party</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic">"Made my daughter's birthday party magical! The colorful decorations and attention to detail were amazing. The team went above and beyond to make it special."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Categories Section -->
+        <section class="py-20 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Perfect for Every <span class="text-orange-600">Occasion</span></h3>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">From intimate gatherings to grand celebrations, we have the perfect jewelry for every event.</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="text-center group cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-pink-100 to-red-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-gem text-3xl text-pink-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Wedding Jewelry</h4>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-hand-holding-heart text-3xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Engagement Jewelry</h4>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-cocktail text-3xl text-purple-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Party Jewelry</h4>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-gopuram text-3xl text-green-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Traditional Jewelry</h4>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-crown text-3xl text-yellow-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Bridal Jewelry Sets</h4>
+                    </div>
+
+                    <div class="text-center group cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-shopping-bag text-3xl text-teal-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">Daily Wear Jewelry</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->  
+
+        <div class="text-center mt-16">
+            <div class="bg-gradient-to-r from-orange-100 to-red-100 rounded-2xl p-8 max-w-4xl mx-auto">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Flexible & Transparent Pricing</h4>
+                        <p class="text-gray-700 text-lg mb-6">Every event is unique, and so are our prices. We offer completely customized quotes based on your specific needs, event size, location, and duration. No hidden fees, no surprises.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank">
+                                <button class="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-orange-700 transition duration-300">
+                                    Get Custom Quote
+                                </button>
+                            </a>
+                            <a href="products">
+                                <button class="bg-transparent border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-xl font-semibold hover:bg-orange-600 hover:text-white transition duration-300">
+                                    View All Items & Prices
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
+            <div>.</div>
 
-            <!-- Contact Section -->
-            <!-- <section class="py-20 px-4 bg-gradient-to-r from-orange-50 to-red-100">
-                <div class="max-w-4xl mx-auto">
-                    <h3 class="text-4xl font-bold text-center mb-4 text-gray-800">Get In Touch</h3>
-                    <p class="text-lg text-center text-gray-600 mb-12">We'd love to hear from you. Send us a message and we'll get back to you shortly.</p>
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <div class="space-y-8">
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
-                                    <i class="fas fa-phone text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold">Phone</h4>
-                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['phone'] }}</p>
-                                    <a href="tel:{{ $siteConfig['business']['phone'] }}" class="text-orange-600 hover:text-orange-700 font-medium">Call us</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold">Email</h4>
-                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['email'] }}</p>
-                                    <a href="mailto:{{ $siteConfig['business']['email'] }}" class="text-orange-600 hover:text-orange-700 font-medium">Email us</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
-                                    <i class="fab fa-whatsapp text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold">WhatsApp</h4>
-                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['whatsapp'] }}</p>
-                                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium">Message us</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
-                                    <i class="fab fa-instagram text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold">Instagram</h4>
-                                    <p class="text-gray-700 mt-1">@metora.in</p>
-                                    <a href="{{ $siteConfig['business']['instagram'] }}" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium">Follow us</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
-                                    <i class="fas fa-map-marker-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold">Address</h4>
-                                    <p class="text-gray-700 mt-1">{{ $siteConfig['business']['address'] }}</p>
-                                    <a href="#" class="text-orange-600 hover:text-orange-700 font-medium">Get directions</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white p-8 rounded-lg shadow-lg">
-                            <h4 class="text-2xl font-semibold mb-6">Send us a message</h4>
-                            <form class="space-y-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Event Type</label>
-                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300">
-                                        <option>Wedding</option>
-                                        <option>Corporate Event</option>
-                                        <option>Birthday Party</option>
-                                        <option>Holiday Celebration</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-300"></textarea>
-                                </div>
-                                <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-6 rounded-md font-semibold text-lg transition duration-300 transform hover:scale-105">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
-            <!-- Contact Section -->
-            <section class="py-16 px-4 bg-gradient-to-r from-orange-50 to-red-100 relative overflow-hidden">
-                <!-- Background decoration -->
-                <div class="absolute inset-0 opacity-10">
-                    <div class="absolute top-10 left-10 w-20 h-20 bg-orange-400 rounded-full blur-xl"></div>
-                    <div class="absolute bottom-20 right-20 w-32 h-32 bg-red-300 rounded-full blur-xl"></div>
-                    <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-orange-300 rounded-full blur-lg"></div>
-                </div>
-
-                <div class="max-w-7xl mx-auto relative z-10">
-                    <!-- Header -->
-                    <div class="text-center mb-12">
-                        <h3 class="text-5xl font-bold mb-4 text-gray-800 tracking-tight">
-                            Get In <span class="text-orange-600">Touch</span>
-                        </h3>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            We'd love to hear from you. Send us a message and we'll get back to you shortly.
-                        </p>
-                        <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6 rounded-full"></div>
-                    </div>
-
-                    <div class="grid lg:grid-cols-3 gap-8">
-                        <!-- Contact Information Cards -->
-                        <div class="lg:col-span-1 space-y-6">
-                            <!-- Phone Card -->
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 text-white rounded-xl flex items-center justify-center shadow-lg">
-                                        <i class="fas fa-phone text-xl"></i>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-gray-800">Phone</h4>
-                                        <p class="text-gray-600 text-sm mb-2">{{ $siteConfig['business']['phone'] }}</p>
-                                        <a href="tel:{{ $siteConfig['business']['phone'] }}" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors">
-                                            Call us <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Email Card -->
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-xl flex items-center justify-center shadow-lg">
-                                        <i class="fas fa-envelope text-xl"></i>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-gray-800">Email</h4>
-                                        <p class="text-gray-600 text-sm mb-2 break-all">{{ $siteConfig['business']['email'] }}</p>
-                                        <a href="mailto:{{ $siteConfig['business']['email'] }}" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors">
-                                            Email us <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- WhatsApp Card -->
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl flex items-center justify-center shadow-lg">
-                                        <i class="fab fa-whatsapp text-xl"></i>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-gray-800">WhatsApp</h4>
-                                        <p class="text-gray-600 text-sm mb-2">{{ $siteConfig['business']['whatsapp'] }}</p>
-                                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors">
-                                            Message us <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Instagram Card -->
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-xl flex items-center justify-center shadow-lg">
-                                        <i class="fab fa-instagram text-xl"></i>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-gray-800">Instagram</h4>
-                                        <p class="text-gray-600 text-sm mb-2">@metora.in</p>
-                                        <a href="{{ $siteConfig['business']['instagram'] }}" target="_blank" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors">
-                                            Follow us <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Address Card -->
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-pink-500 text-white rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt text-xl"></i>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-gray-800">Address</h4>
-                                        <p class="text-gray-600 text-sm mb-2 leading-relaxed">{{ $siteConfig['business']['address'] }}</p>
-                                        <a href="#" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors">
-                                            Get directions <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Contact Form -->
-                        <div class="lg:col-span-2">
-                            <div class="bg-white/90 backdrop-blur-sm p-8 lg:p-12 rounded-3xl shadow-2xl border border-white/20 h-full">
-                                <div class="mb-8">
-                                    <h4 class="text-3xl font-bold text-gray-800 mb-3">Send us a message</h4>
-                                    <p class="text-gray-600">Fill out the form below and we'll get back to you as soon as possible.</p>
-                                </div>
-                                
-                                <form class="space-y-6">
-                                    <div class="grid md:grid-cols-2 gap-6">
-                                        <div class="group">
-                                            <label class="block text-sm font-semibold text-gray-700 mb-2 transition-colors group-focus-within:text-orange-600">Name *</label>
-                                            <input type="text" required class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-0 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300">
-                                        </div>
-                                        <div class="group">
-                                            <label class="block text-sm font-semibold text-gray-700 mb-2 transition-colors group-focus-within:text-orange-600">Email *</label>
-                                            <input type="email" required class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-0 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="group">
-                                        <label class="block text-sm font-semibold text-gray-700 mb-2 transition-colors group-focus-within:text-orange-600">Event Type</label>
-                                        <select class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-0 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 appearance-none cursor-pointer">
-                                            <option>Wedding</option>
-                                            <option>Corporate Event</option>
-                                            <option>Birthday Party</option>
-                                            <option>Holiday Celebration</option>
-                                            <option>Other</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div class="group">
-                                        <label class="block text-sm font-semibold text-gray-700 mb-2 transition-colors group-focus-within:text-orange-600">Message *</label>
-                                        <textarea rows="5" required placeholder="Tell us about your event requirements..." class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-0 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:border-gray-300 resize-none"></textarea>
-                                    </div>
-                                    
-                                    <div class="pt-4">
-                                        <button type="submit" class="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 px-8 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] flex items-center justify-center space-x-2">
-                                            <span>Send Message</span>
-                                            <i class="fas fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    </main>
-
-@include('footer')
+        @include('footer')
