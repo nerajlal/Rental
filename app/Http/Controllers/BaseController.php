@@ -26,7 +26,7 @@ class BaseController extends Controller
                 'address' => 'Test Event Street, City, State 12345',
                 'whatsapp' => '+91 85474 70675',
                 'instagram' => 'https://instagram.com/metora.in',
-                'expiry_date' => '12-03-2026'
+                'expiry_date' => '12-03-2025'
             ],
             'colors' => [
                 'primary' => '#c2410c',

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\BaseController;
+use App\Http\Controllers\Admin\AdminBaseController;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
 use App\Mail\ContactFormMail;
 
-class ProductController extends BaseController
+class ProductController extends AdminBaseController
 {
     /**
      * Display a listing of the resource.
