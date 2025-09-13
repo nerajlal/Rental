@@ -16,24 +16,29 @@
                 Products
             </a>
 
-            <a href="#" id="upgrade-btn" class="sidebar-link @if($page === 'orders') active @endif 
+            <a href="#" id="upgrade-btn" class="sidebar-link @if($page === 'managers') active @endif 
             flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fa-solid fa-user-plus w-5 h-5 mr-3"></i>
                 Add Managers
             </a>
 
-            <a href="{{ url('/admin/customers') }}" class="sidebar-link @if($page === 'customers') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <a href="#" id="upgrade-btn" class="sidebar-link @if($page === 'customers') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fas fa-users w-5 h-5 mr-3"></i>
                 Customers
             </a>
 
-            <a href="#" id="analytics-btn" 
-            class="sidebar-link @if($page === 'analytics') active @endif 
+            <a href="#" id="upgrade-btn" class="sidebar-link @if($page === 'orders') active @endif 
+            flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+                <i class="fa-solid fa-boxes w-5 h-5 mr-3"></i>
+                Orders
+            </a>
+
+            <a href="#" id="upgrade-btn" class="sidebar-link @if($page === 'analytics') active @endif 
             flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fa-solid fa-chart-line w-5 h-5 mr-3"></i>
                 Analytics
             </a>
-
+            
             <a href="{{ url('/admin/settings') }}" class="sidebar-link @if($page === 'settings') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
                 <i class="fas fa-cog w-5 h-5 mr-3"></i>
                 Settings
