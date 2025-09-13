@@ -49,7 +49,7 @@
     <!-- Main Content -->
     <div class="lg:ml-64 min-h-screen">
         <!-- Header -->
-        <header class="bg-white shadow-sm border-b px-6 py-4 fixed top-0 right-0 w-full lg:w-[calc(100%-16rem)] z-30">
+        <header class="bg-white shadow-sm border-b px-8 py-6 fixed top-0 right-0 w-full lg:w-[calc(100%-16rem)] z-30">
             <div class="flex items-center justify-between">
                 <h2 id="page-title" class="text-2xl font-bold text-gray-800">Dashboard</h2>
                 @if(isset($expiry_warning) && $expiry_warning)

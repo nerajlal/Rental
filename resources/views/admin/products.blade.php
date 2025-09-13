@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Storage;
 @include('admin.sidebar')
 
         <!-- Page Content -->
-        <main class="p-6 pt-24">
+        <main class="p-6 pt-28">
             <!-- Products Page -->
             <div id="products-page" class="page">
                 <div class="flex justify-between items-center mb-6">

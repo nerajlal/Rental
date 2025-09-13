@@ -2,7 +2,7 @@
 @include('admin.sidebar')
 
         <!-- Page Content -->
-        <main class="p-6 pt-24">
+        <main class="p-6 pt-28">
             <!-- Customers Page -->
             <div id="customers-page" class="page">
                 <div class="bg-white p-8 rounded-lg shadow-sm text-center">

@@ -2,7 +2,7 @@
 @include('admin.sidebar')
 
         <!-- Page Content -->
-        <main class="p-6 pt-24">
+        <main class="p-6 pt-28">
             <!-- Settings Page -->
             <div id="settings-page" class="page">
                 <div class="max-w-2xl mx-auto">

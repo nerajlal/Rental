@@ -2,7 +2,7 @@
 @include('admin.sidebar')
 
         <!-- Page Content -->
-    <main class="p-6 pt-24">
+    <main class="p-6 pt-28">
             <!-- Dashboard Page -->
             <div id="dashboard-page" class="page">
                 <!-- Stats Cards -->
