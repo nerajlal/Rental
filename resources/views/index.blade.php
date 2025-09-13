@@ -3,7 +3,7 @@
     <!-- Main Content -->
     <main class="pt-16" id="main-content">
         <!-- Hero Section -->
-        <section class="hero-gradient text-white py-20 px-4 relative overflow-hidden">
+        <section class="bg-gradient-to-br from-orange-700 to-orange-600 text-white py-20 px-4 relative overflow-hidden">
             <!-- Floating decorative elements -->
             <div class="absolute inset-0 opacity-20">
                 <div class="absolute top-10 left-10 w-4 h-4 bg-white rounded-full animate-pulse"></div>
@@ -180,21 +180,21 @@
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Rental Service?</h3>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center card-hover p-6 rounded-lg bg-gray-50">
+                    <div class="text-center transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl p-6 rounded-lg bg-gray-50">
                         <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-gem text-3xl text-orange-600"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Premium Quality</h4>
                         <p class="text-gray-600">Hand-selected ornaments and decorations crafted with attention to detail for your special occasions.</p>
                     </div>
-                    <div class="text-center card-hover p-6 rounded-lg bg-gray-50">
+                    <div class="text-center transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl p-6 rounded-lg bg-gray-50">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-clock text-3xl text-blue-600"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Flexible Rental</h4>
                         <p class="text-gray-600">Choose rental periods that suit your event timeline, from single day to extended celebrations.</p>
                     </div>
-                    <div class="text-center card-hover p-6 rounded-lg bg-gray-50">
+                    <div class="text-center transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl p-6 rounded-lg bg-gray-50">
                         <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-headset text-3xl text-emerald-600"></i>
                         </div>
