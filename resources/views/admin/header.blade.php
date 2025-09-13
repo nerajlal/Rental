@@ -50,11 +50,10 @@
     <div class="lg:ml-64 min-h-screen">
         <!-- Header -->
         <header class="bg-white shadow-sm border-b px-6 py-4 fixed top-0 right-0 w-full lg:w-[calc(100%-16rem)] z-30">
-            
             <div class="flex items-center justify-between">
                 <h2 id="page-title" class="text-2xl font-bold text-gray-800">Dashboard</h2>
                 @if(isset($expiry_warning) && $expiry_warning)
-                    <div class="bg-yellow-100 border-b-4 border-yellow-500 text-yellow-700 p-4 text-center" role="alert">
+                    <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-3 py-1 rounded-md text-sm" role="alert">
                         <p>{{ $expiry_warning }}</p>
                     </div>
                 @endif
