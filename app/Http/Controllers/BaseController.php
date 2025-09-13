@@ -6,16 +6,6 @@ use Carbon\Carbon;
 
 class BaseController extends Controller
 {
-    public function __construct()
-    {
-        $config = $this->getSiteConfig();
-        $expiryDate = Carbon::createFromFormat('d-m-Y', $config['business']['expiry_date']);
-
-        if (Carbon::now()->greaterThan($expiryDate)) {
-            abort(response(view('test')));
-        }
-    }
-    
     protected function getSiteConfig()
     {
         return [
@@ -26,7 +16,7 @@ class BaseController extends Controller
                 'address' => 'Test Event Street, City, State 12345',
                 'whatsapp' => '+91 85474 70675',
                 'instagram' => 'https://instagram.com/metora.in',
-                'expiry_date' => '12-03-2025'
+                'expiry_date' => '12-03-2026'
             ],
             'colors' => [
                 'primary' => '#c2410c',

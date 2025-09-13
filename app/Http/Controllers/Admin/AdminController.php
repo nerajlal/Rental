@@ -3,15 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\AdminBaseController;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 class AdminController extends AdminBaseController
 {
     public function index()
     {
-        return view('admin.index', ['siteConfig' => $this->getSiteConfig(), 'page' => 'dashboard']);
+        $productCount = Product::count();
+        $productsThisMonth = Product::where('created_at', '>=', Carbon::now()->startOfMonth())->count();
+        return view('admin.index', [
+            'siteConfig' => $this->getSiteConfig(), 
+            'page' => 'dashboard', 
+            'productCount' => $productCount,
+            'productsThisMonth' => $productsThisMonth
+        ]);
     }
 
     public function orders()
