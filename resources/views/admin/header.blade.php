@@ -40,6 +40,7 @@
     </style>
 </head>
 <body class="bg-gray-50">
+    
     <!-- Mobile Sidebar Toggle -->
     <button id="sidebar-toggle" class="lg:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-lg shadow-lg">
         <i class="fas fa-bars w-6 h-6"></i>
@@ -49,8 +50,14 @@
     <div class="lg:ml-64 min-h-screen">
         <!-- Header -->
         <header class="bg-white shadow-sm border-b px-6 py-4 fixed top-0 right-0 w-full lg:w-[calc(100%-16rem)] z-30">
+            
             <div class="flex items-center justify-between">
                 <h2 id="page-title" class="text-2xl font-bold text-gray-800">Dashboard</h2>
+                @if(isset($expiry_warning) && $expiry_warning)
+                    <div class="bg-yellow-100 border-b-4 border-yellow-500 text-yellow-700 p-4 text-center" role="alert">
+                        <p>{{ $expiry_warning }}</p>
+                    </div>
+                @endif
                 <div class="flex items-center space-x-4">
                     <button class="relative p-2 text-gray-600 hover:text-gray-800">
                         <i class="fas fa-bell w-6 h-6"></i>
