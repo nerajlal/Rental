@@ -2,8 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+
 class BaseController extends Controller
 {
+    public function __construct()
+    {
+        $config = $this->getSiteConfig();
+        $expiryDate = Carbon::createFromFormat('d-m-Y', $config['business']['expiry_date']);
+
+        if (Carbon::now()->greaterThan($expiryDate)) {
+            abort(response(view('test')));
+        }
+    }
+    
     protected function getSiteConfig()
     {
         return [
