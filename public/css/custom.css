@@ -1,0 +1,20 @@
+.hero-section .hero-slider {
+    height: 600px;
+}
+
+.hero-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-slider .swiper-button-next,
+.hero-slider .swiper-button-prev {
+    color: #fff;
+}
+
+.hero-slider .swiper-pagination-bullet {
+    background: #fff;
+}

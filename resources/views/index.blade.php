@@ -3,42 +3,39 @@
     <!-- Main Content -->
     <main class="pt-16" id="main-content">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-primary to-primaryHover text-white py-20 px-4 relative overflow-hidden">
-            <!-- Floating decorative elements -->
-            <div class="absolute inset-0 opacity-20">
-                <div class="absolute top-10 left-10 w-4 h-4 bg-white rounded-full animate-pulse"></div>
-                <div class="absolute top-32 right-20 w-6 h-6 bg-white/70 rounded-full animate-bounce"></div>
-                <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-white/50 rounded-full animate-pulse"></div>
-                <div class="absolute bottom-32 right-1/3 w-5 h-5 bg-white/60 rounded-full animate-bounce"></div>
-            </div>
-            
-            <div class="max-w-7xl mx-auto text-center relative z-10">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6" id="hero-title">Transform Your Events with Elegant Decorations</h2>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Premium ornament rentals for weddings, corporate events, parties, and special occasions. Make every moment memorable with our exquisite collection.</p>
-                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-                    <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 w-full md:w-auto">Browse Products</button>
-                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300 w-full md:w-auto">Get Quote</button>
-                </div>
-                
-                <!-- Stats counter -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold mb-2">500+</div>
-                        <div class="text-sm md:text-base opacity-90">Happy Clients</div>
+        <section class="relative hero-section">
+            <div class="swiper-container hero-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-6">Transform Your Events with Elegant Decorations</h2>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Premium ornament rentals for weddings, corporate events, parties, and special occasions.</p>
+                            <div>
+                                <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Browse Products</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold mb-2">1000+</div>
-                        <div class="text-sm md:text-base opacity-90">Events Decorated</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold mb-2">200+</div>
-                        <div class="text-sm md:text-base opacity-90">Premium Items</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold mb-2">5+</div>
-                        <div class="text-sm md:text-base opacity-90">Years Experience</div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
+                        <div class="absolute inset-0 bg-black opacity-60"></div>
+                        <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-6">Make Every Moment Memorable</h2>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Our exquisite collection will make your special day unforgettable.</p>
+                            <div>
+                                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Get Quote</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
             </div>
         </section>
 
