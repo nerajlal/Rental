@@ -8,25 +8,36 @@
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/3.webp');"></div>
                         <div class="absolute inset-0 bg-gradient-to-br from-primary to-primaryHover opacity-75"></div>
                         <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
                             <h2 class="text-4xl md:text-6xl font-bold mb-6">Your Perfect Look, Our Precious Touch</h2>
                             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">From bridal to festive wear, discover timeless rental jewels that complete your celebrations beautifully.</p>
                             <div>
-                                <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Browse Products</button>
+                                <a href="/products">
+                                    <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Browse Products</button>
+                                </a>
+                                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Get Quote</button>
+                                </a>
                             </div>
+                            
                         </div>
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/2.webp');"></div>
                         <div class="absolute inset-0 bg-gradient-to-br from-primary to-primaryHover opacity-75"></div>
                         <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
                             <h2 class="text-4xl md:text-6xl font-bold mb-6">Luxury Jewelry, Made Accessible</h2>
                             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Rent hassle-free, return with ease – because elegance should be effortless.</p>
                             <div>
-                                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Get Quote</button>
+                                <a href="/products">
+                                    <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Browse Products</button>
+                                </a>
+                                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Get Quote</button>
+                                </a>
                             </div>
                         </div>
                     </div>
