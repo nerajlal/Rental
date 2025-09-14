@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const editProductModal = document.getElementById('edit-product-modal');
     const upgradeModal = document.getElementById('upgrade-modal');
     const upgradeBenefitsModal = document.getElementById('upgrade-benefits-modal');
+    const imageLimitModal = document.getElementById('image-limit-modal');
 
     // Trigger Elements
     const addProductBtn = document.getElementById('add-product-btn');
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelEditModalBtn = document.getElementById('cancel-edit-modal');
     const cancelUpgradeModalBtn = document.getElementById('cancel-upgrade-modal');
     const closeUpgradeBenefitsModalBtn = document.getElementById('close-upgrade-benefits-modal');
+    const cancelImageLimitModalBtn = document.getElementById('cancel-image-limit-modal');
 
     // --- Event Listeners ---
 
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addProductBtn.addEventListener('click', () => {
             const limitReached = addProductBtn.dataset.limitReached === '1';
             if (limitReached) {
-                openModal(upgradeBenefitsModal);
+                openModal(imageLimitModal);
             } else {
                 openModal(addProductModal);
             }
@@ -97,6 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeUpgradeBenefitsModalBtn && upgradeBenefitsModal) {
         closeUpgradeBenefitsModalBtn.addEventListener('click', () => closeModal(upgradeBenefitsModal));
     }
+    if (cancelImageLimitModalBtn && imageLimitModal) {
+        cancelImageLimitModalBtn.addEventListener('click', () => closeModal(imageLimitModal));
+    }
 
     // Sidebar triggers for upgrade modal
     const sidebarTriggers = [analyticsBtn, addManagerBtn, customersBtn, ordersBtn];
@@ -110,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close modals on overlay click
-    const allModals = [addProductModal, editProductModal, upgradeModal, upgradeBenefitsModal];
+    const allModals = [addProductModal, editProductModal, upgradeModal, upgradeBenefitsModal, imageLimitModal];
     allModals.forEach(modal => {
         if (modal) {
             modal.addEventListener('click', (e) => {

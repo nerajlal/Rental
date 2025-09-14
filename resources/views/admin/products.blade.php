@@ -201,6 +201,20 @@ use Illuminate\Support\Facades\Storage;
         </div>
     </div>
 
+    <!-- Image Limit Reached Modal -->
+    <div id="image-limit-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 modal-overlay">
+        <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-sm text-center fade-in">
+            <h2 class="text-2xl font-bold mb-4">Image Limit Reached</h2>
+            <p class="text-gray-600 mb-6">You have reached your product image limit. To add more products, please upgrade your plan.</p>
+            <div class="flex justify-center space-x-4">
+                <button type="button" id="cancel-image-limit-modal" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">Cancel</button>
+                <a href="https://wa.me/8547470675?text=I%20want%20to%20upgrade" target="_blank">
+                    <button type="button" class="px-6 py-2 bg-green-600 text-white rounded-md text-sm font-medium hover:bg-green-700">Upgrade Now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Upgrade Modal -->
     <div id="upgrade-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 modal-overlay">
         <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-sm text-center fade-in">
