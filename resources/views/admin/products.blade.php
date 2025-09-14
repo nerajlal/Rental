@@ -206,7 +206,9 @@ use Illuminate\Support\Facades\Storage;
             <p class="text-gray-600 mb-6">Upgrade to the Business Plan to edit products.</p>
             <div class="flex justify-center space-x-4">
                 <button type="button" id="cancel-upgrade-modal" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">Cancel</button>
-                <button type="button" class="px-6 py-2 bg-green-600 text-white rounded-md text-sm font-medium hover:bg-green-700">Upgrade Now</button>
+                <a href="https://wa.me/8547470675?text=I%20want%20to%20upgrade" target="_blank">
+                    <button type="button" class="px-6 py-2 bg-green-600 text-white rounded-md text-sm font-medium hover:bg-green-700">Upgrade Now</button>
+                </a>
             </div>
         </div>
     </div>
