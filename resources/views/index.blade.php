@@ -33,9 +33,6 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
-                <div class="swiper-button-next text-white"></div>
-                <div class="swiper-button-prev text-white"></div>
             </div>
         </section>
 
