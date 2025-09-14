@@ -4,7 +4,7 @@
     <main class="pt-16" id="main-content">
         <!-- About Page -->
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-20 px-4">
+        <section class="bg-gradient-to-r from-primary to-primaryHover text-white py-20 px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">About Our Rental Service</h2>
                 <p class="text-xl md:text-2xl">We specialize in providing premium ornament rental solutions to make your events truly unforgettable.</p>
@@ -21,8 +21,8 @@
                         <p class="text-gray-600 mb-6">From intimate gatherings to grand corporate events, we've curated an extensive collection of high-quality ornaments and decorations that cater to diverse themes and styles. Our commitment to excellence has made us the trusted choice for event planners and individuals alike.</p>
                         <p class="text-gray-600">We believe that beautiful decorations shouldn't be a luxury, which is why we offer flexible rental options that make premium ornaments accessible for any budget.</p>
                     </div>
-                    <div class="bg-gradient-to-br from-orange-100 to-pink-100 rounded-lg p-8 text-center">
-                        <i class="fas fa-star text-6xl mx-auto mb-4 text-orange-600"></i>
+                    <div class="bg-gradient-to-br from-primary/10 to-pink-100 rounded-lg p-8 text-center">
+                        <i class="fas fa-star text-6xl mx-auto mb-4 text-primary"></i>
                         <h4 class="text-2xl font-bold text-gray-800 mb-2">10+ Years</h4>
                         <p class="text-gray-600">of Creating Beautiful Events</p>
                     </div>

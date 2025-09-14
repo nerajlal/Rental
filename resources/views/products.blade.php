@@ -9,7 +9,7 @@
 
                 <!-- Categories -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <button class="category-filter active bg-orange-600 text-white px-6 py-2 rounded-full font-medium" data-category="all">All Categories</button>
+                    <button class="category-filter active bg-primary text-white px-6 py-2 rounded-full font-medium" data-category="all">All Categories</button>
                     @php
                         $categories = $products->pluck('category')->unique();
                     @endphp

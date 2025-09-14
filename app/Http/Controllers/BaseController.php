@@ -19,14 +19,14 @@ class BaseController extends Controller
                 'expiry_date' => '01-03-2026'
             ],
             'colors' => [
-                'primary' => '#c2410c',
-                'primaryHover' => '#ea580c',
-                'secondary' => '#1e40af',
-                'secondaryHover' => '#2563eb',
-                'accent' => '#059669',
-                'neutral' => '#374151',
-                'light' => '#f9fafb',
-                'dark' => '#111827'
+                'primary' => '#7B2CBF',       // Purple
+                'primaryHover' => '#9D4EDD',  // Lighter Purple
+                'secondary' => '#F72585',     // Magenta/Pink
+                'secondaryHover' => '#FF4DA6',// Hover Pink
+                'accent' => '#FF8500',        // Orange
+                'neutral' => '#FFD60A',       // Yellow/Gold
+                'light' => '#FFFFFF',         // White (background)
+                'dark' => '#000000'           // Black (text)
             ]
         ];
     }
