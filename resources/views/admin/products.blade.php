@@ -234,9 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to close a modal
     const closeModal = (modal) => modal.classList.add("hidden");
 
-    // Open Add Product modal
-    addProductBtn?.addEventListener("click", () => openModal(addProductModal));
-
     // Close Add Product modal
     cancelAddBtn?.addEventListener("click", () => closeModal(addProductModal));
     addProductModal?.addEventListener("click", (e) => {
