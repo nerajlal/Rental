@@ -188,6 +188,12 @@ use Illuminate\Support\Facades\Storage;
                     <label for="edit-product-description" class="block text-sm font-medium text-gray-700">Description</label>
                     <textarea id="edit-product-description" name="description" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"></textarea>
                 </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Current Images</label>
+                    <div id="edit-product-images-container" class="mt-2 grid grid-cols-3 gap-4">
+                        <!-- Images will be dynamically inserted here -->
+                    </div>
+                </div>
                 <div class="flex justify-between items-center pt-4">
                     <div>
                         <button type="button" id="delete-product-btn" class="px-6 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700">Delete</button>
@@ -276,6 +282,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 editProductForm.querySelector('#edit-price').value = product.price;
                 editProductForm.querySelector('#edit-weight').value = product.weight;
                 editProductForm.querySelector('#edit-product-description').value = product.description;
+
+                const imagesContainer = document.getElementById('edit-product-images-container');
+                imagesContainer.innerHTML = ''; // Clear previous images
+                if (product.images && product.images.length > 0) {
+                    product.images.forEach(image => {
+                        const imgElement = document.createElement('img');
+                        const imageName = image.image_path.split('/').pop();
+                        imgElement.src = `/product-image/${imageName}`;
+                        imgElement.alt = "Product Image";
+                        imgElement.className = 'w-full h-24 object-cover rounded-md';
+                        imagesContainer.appendChild(imgElement);
+                    });
+                } else {
+                    imagesContainer.innerHTML = '<p class="text-gray-500 col-span-3">No images found for this product.</p>';
+                }
 
                 openModal(editProductModal);
 
