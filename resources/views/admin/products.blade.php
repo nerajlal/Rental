@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Storage;
                         <h3 class="text-xl font-semibold">Product Management</h3>
                         <p class="text-gray-600">Manage your ornament inventory</p>
                     </div>
-                    <button id="add-product-btn" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 transition duration-300">
+                    <button id="add-product-btn"
+                            data-limit-reached="{{ $imageLimitReached ? '1' : '0' }}"
+                            class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 transition duration-300">
                         <i class="fas fa-plus w-5 h-5"></i>
                         <span>Add Product</span>
                     </button>

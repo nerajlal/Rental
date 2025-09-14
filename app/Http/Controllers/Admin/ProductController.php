@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\AdminBaseController;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
@@ -17,10 +18,14 @@ class ProductController extends AdminBaseController
     public function index()
     {
         $products = Product::all();
+        $imageCount = ProductImage::count();
+        $imageLimitReached = $imageCount >= 70;
+
         return view('admin.products', [
             'siteConfig' => $this->getSiteConfig(),
             'page' => 'products',
-            'products' => $products
+            'products' => $products,
+            'imageLimitReached' => $imageLimitReached
         ]);
     }
 

@@ -55,9 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Event Listeners ---
 
     // Add Product Modal
-    if (addProductBtn && addProductModal) {
-        addProductBtn.addEventListener('click', () => openModal(addProductModal));
+    if (addProductBtn) {
+        addProductBtn.addEventListener('click', () => {
+            const limitReached = addProductBtn.dataset.limitReached === '1';
+            if (limitReached) {
+                openModal(upgradeBenefitsModal);
+            } else {
+                openModal(addProductModal);
+            }
+        });
     }
+
     if (cancelAddModalBtn && addProductModal) {
         cancelAddModalBtn.addEventListener('click', () => closeModal(addProductModal));
     }
