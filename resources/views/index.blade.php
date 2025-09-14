@@ -9,7 +9,7 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
-                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-primaryHover opacity-75"></div>
                         <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
                             <h2 class="text-4xl md:text-6xl font-bold mb-6">Your Perfect Look, Our Precious Touch</h2>
                             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">From bridal to festive wear, discover timeless rental jewels that complete your celebrations beautifully.</p>
@@ -21,7 +21,7 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
-                        <div class="absolute inset-0 bg-black opacity-60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-primaryHover opacity-75"></div>
                         <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
                             <h2 class="text-4xl md:text-6xl font-bold mb-6">Luxury Jewelry, Made Accessible</h2>
                             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Rent hassle-free, return with ease – because elegance should be effortless.</p>
