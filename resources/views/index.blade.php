@@ -11,8 +11,8 @@
                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
                         <div class="absolute inset-0 bg-black opacity-50"></div>
                         <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
-                            <h2 class="text-4xl md:text-6xl font-bold mb-6">Transform Your Events with Elegant Decorations</h2>
-                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Premium ornament rentals for weddings, corporate events, parties, and special occasions.</p>
+                            <h2 class="text-4xl md:text-6xl font-bold mb-6">Your Perfect Look, Our Precious Touch</h2>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">From bridal to festive wear, discover timeless rental jewels that complete your celebrations beautifully.</p>
                             <div>
                                 <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Browse Products</button>
                             </div>
@@ -23,8 +23,8 @@
                         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-1.jpg');"></div>
                         <div class="absolute inset-0 bg-black opacity-60"></div>
                         <div class="max-w-7xl mx-auto text-center relative z-10 text-white py-20 px-4 flex flex-col justify-center items-center h-full">
-                            <h2 class="text-4xl md:text-6xl font-bold mb-6">Make Every Moment Memorable</h2>
-                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Our exquisite collection will make your special day unforgettable.</p>
+                            <h2 class="text-4xl md:text-6xl font-bold mb-6">Luxury Jewelry, Made Accessible</h2>
+                            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Rent hassle-free, return with ease – because elegance should be effortless.</p>
                             <div>
                                 <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Get Quote</button>
                             </div>
