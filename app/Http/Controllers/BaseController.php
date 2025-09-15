@@ -18,6 +18,7 @@ class BaseController extends Controller
                 'instagram' => 'https://instagram.com/metora.in',
                 'expiry_date' => '01-03-2026'
             ],
+            
             'colors' => [
                 'primary' => '#7B2CBF',       // Purple
                 'primaryHover' => '#9D4EDD',  // Lighter Purple
