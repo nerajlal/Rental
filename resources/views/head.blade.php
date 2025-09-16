@@ -28,7 +28,9 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-xl font-bold text-gray-800" id="nav-brand">{{ $siteConfig['business']['name'] }}</h1>
+                        <a href="/">
+                            <h1 class="text-xl font-bold text-gray-800" id="nav-brand">{{ $siteConfig['business']['name'] }}</h1>
+                        </a>
                     </div>
                 </div>
 
