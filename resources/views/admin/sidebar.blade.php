@@ -20,27 +20,47 @@
 
         <!-- All these will trigger the same popup -->
         <a href="#" id="add-manager-btn" 
-           class="sidebar-link @if($page === 'managers') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
-            <i class="fa-solid fa-user-plus w-5 h-5 mr-3"></i>
-            Add Managers
+           class="sidebar-link @if($page === 'managers') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <div class="flex items-center">
+                <i class="fa-solid fa-user-plus w-5 h-5 mr-3"></i>
+                Add Managers
+            </div>
+            @if(Auth::guard('admin')->user()->plan > 0)
+            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            @endif
         </a>
 
         <a href="#" id="customers-btn" 
-           class="sidebar-link @if($page === 'customers') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
-            <i class="fas fa-users w-5 h-5 mr-3"></i>
-            Customers
+           class="sidebar-link @if($page === 'customers') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <div class="flex items-center">
+                <i class="fas fa-users w-5 h-5 mr-3"></i>
+                Customers
+            </div>
+            @if(Auth::guard('admin')->user()->plan > 0)
+            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            @endif
         </a>
 
         <a href="#" id="orders-btn" 
-           class="sidebar-link @if($page === 'orders') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
-            <i class="fa-solid fa-boxes w-5 h-5 mr-3"></i>
-            Orders
+           class="sidebar-link @if($page === 'orders') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <div class="flex items-center">
+                <i class="fa-solid fa-boxes w-5 h-5 mr-3"></i>
+                Orders
+            </div>
+            @if(Auth::guard('admin')->user()->plan > 0)
+            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            @endif
         </a>
 
         <a href="#" id="analytics-btn" 
-           class="sidebar-link @if($page === 'analytics') active @endif flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
-            <i class="fa-solid fa-chart-line w-5 h-5 mr-3"></i>
-            Analytics
+           class="sidebar-link @if($page === 'analytics') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
+            <div class="flex items-center">
+                <i class="fa-solid fa-chart-line w-5 h-5 mr-3"></i>
+                Analytics
+            </div>
+            @if(Auth::guard('admin')->user()->plan > 0)
+            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            @endif
         </a>
         
         <a href="{{ url('/admin/settings') }}" 
