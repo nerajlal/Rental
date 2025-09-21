@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\AdminBaseController;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
-class ManagerController extends Controller
+class ManagerController extends AdminBaseController
 {
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('admin.add-manager', ['page' => 'managers']);
+        return view('admin.add-manager', [
+            'siteConfig' => $this->getSiteConfig(),
+            'page' => 'managers'
+        ]);
     }
 
     /**
