@@ -44,6 +44,9 @@
             <button type="button" id="close-upgrade-benefits-modal" class="mt-4 text-sm text-gray-600 hover:text-gray-800">Close</button>
         </div>
     </div>
+    <script>
+        window.isProFeatureLocked = {{ Auth::guard('admin')->user()->plan <= 1 ? 'true' : 'false' }};
+    </script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
