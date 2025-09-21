@@ -26,7 +26,7 @@
                 Add Managers
             </div>
             @if(Auth::guard('admin')->user()->plan == 0)
-            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
 
@@ -37,7 +37,7 @@
                 Customers
             </div>
             @if(Auth::guard('admin')->user()->plan == 0)
-            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
 
@@ -48,7 +48,7 @@
                 Orders
             </div>
             @if(Auth::guard('admin')->user()->plan == 0)
-            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
 
@@ -59,7 +59,7 @@
                 Analytics
             </div>
             @if(Auth::guard('admin')->user()->plan == 0)
-            <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
+            <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
         
