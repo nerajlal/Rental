@@ -31,13 +31,17 @@
                     <span><b>Custom Domain:</b> Use your own domain name for a professional look.</span>
                 </li>
             </ul>
-            <div class="mt-8 flex flex-col items-center">
-                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="w-full text-center px-6 py-3 bg-accent text-white rounded-md text-lg font-semibold hover:bg-accent-dark transition duration-300">
+            <div class="flex items-center space-x-4 mt-8">
+                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteConfig['business']['whatsapp']) }}" target="_blank" class="flex-1 text-center px-6 py-3 bg-accent text-white rounded-md text-lg font-semibold hover:bg-accent-dark transition duration-300">
                     <i class="fab fa-whatsapp mr-2"></i>
-                    Contact on WhatsApp to Upgrade
+                    Contact on WhatsApp
                 </a>
-                <button type="button" id="close-upgrade-benefits-modal" class="mt-4 text-sm text-gray-600 hover:text-gray-800">Close</button>
+                <a href="https://metora.in/saas" target="_blank" class="flex-1 text-center px-6 py-3 bg-accent text-white rounded-md text-lg font-semibold hover:bg-accent-dark transition duration-300">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    View Plans
+                </a>
             </div>
+            <button type="button" id="close-upgrade-benefits-modal" class="mt-4 text-sm text-gray-600 hover:text-gray-800">Close</button>
         </div>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
