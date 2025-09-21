@@ -25,7 +25,7 @@
                 <i class="fa-solid fa-user-plus w-5 h-5 mr-3"></i>
                 Add Managers
             </div>
-            @if(Auth::guard('admin')->user()->plan > 0)
+            @if(Auth::guard('admin')->user()->plan == 0)
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
@@ -36,7 +36,7 @@
                 <i class="fas fa-users w-5 h-5 mr-3"></i>
                 Customers
             </div>
-            @if(Auth::guard('admin')->user()->plan > 0)
+            @if(Auth::guard('admin')->user()->plan == 0)
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
@@ -47,7 +47,7 @@
                 <i class="fa-solid fa-boxes w-5 h-5 mr-3"></i>
                 Orders
             </div>
-            @if(Auth::guard('admin')->user()->plan > 0)
+            @if(Auth::guard('admin')->user()->plan == 0)
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
@@ -58,7 +58,7 @@
                 <i class="fa-solid fa-chart-line w-5 h-5 mr-3"></i>
                 Analytics
             </div>
-            @if(Auth::guard('admin')->user()->plan > 0)
+            @if(Auth::guard('admin')->user()->plan == 0)
             <span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
