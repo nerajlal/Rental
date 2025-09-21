@@ -1,4 +1,7 @@
 <!-- Sidebar -->
+@php
+    $isProFeatureLocked = Auth::guard('admin')->user()->plan <= 1;
+@endphp
 <div id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-white shadow-lg sidebar-transition z-40 slide-in hidden lg:block">
     <div class="p-6 border-b">
         <h1 class="text-xl font-bold text-gray-800">Admin Panel</h1>
@@ -19,46 +22,46 @@
         </a>
 
         <!-- All these will trigger the same popup -->
-        <a href="{{ url('/admin/managers') }}" id="add-manager-btn"
+        <a href="{{ $isProFeatureLocked ? '#' : url('/admin/managers') }}" id="add-manager-btn"
            class="sidebar-link @if($page === 'managers') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
             <div class="flex items-center">
                 <i class="fa-solid fa-user-plus w-5 h-5 mr-3"></i>
                 Add Managers
             </div>
-            @if(Auth::guard('admin')->user()->plan <= 1)
+            @if($isProFeatureLocked)
             <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
 
-        <a href="{{ url('/admin/customers') }}" id="customers-btn"
+        <a href="{{ $isProFeatureLocked ? '#' : url('/admin/customers') }}" id="customers-btn"
            class="sidebar-link @if($page === 'customers') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
             <div class="flex items-center">
                 <i class="fas fa-users w-5 h-5 mr-3"></i>
                 Customers
             </div>
-            @if(Auth::guard('admin')->user()->plan <= 1)
+            @if($isProFeatureLocked)
             <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
 
-        <a href="{{ url('/admin/orders') }}" id="orders-btn"
+        <a href="{{ $isProFeatureLocked ? '#' : url('/admin/orders') }}" id="orders-btn"
            class="sidebar-link @if($page === 'orders') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
             <div class="flex items-center">
                 <i class="fa-solid fa-boxes w-5 h-5 mr-3"></i>
                 Orders
             </div>
-            @if(Auth::guard('admin')->user()->plan <= 1)
+            @if($isProFeatureLocked)
             <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
 
-        <a href="{{ url('/admin/analytics') }}" id="analytics-btn"
+        <a href="{{ $isProFeatureLocked ? '#' : url('/admin/analytics') }}" id="analytics-btn"
            class="sidebar-link @if($page === 'analytics') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
             <div class="flex items-center">
                 <i class="fa-solid fa-chart-line w-5 h-5 mr-3"></i>
                 Analytics
             </div>
-            @if(Auth::guard('admin')->user()->plan <= 1)
+            @if($isProFeatureLocked)
             <span class="bg-gradient-to-r from-primary to-accent text-white text-xs font-bold px-2 py-1 rounded-full">Pro</span>
             @endif
         </a>
@@ -84,7 +87,7 @@
 
 
 <script>
-    @if(Auth::guard('admin')->user()->plan <= 1)
+    @if($isProFeatureLocked)
     // Select all the links/buttons that should open the popup
     const popupTriggers = [
         'upgrade-btn',
