@@ -104,17 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Sidebar triggers for upgrade modal
-    if (window.isProFeatureLocked) {
-        const sidebarTriggers = [analyticsBtn, addManagerBtn, customersBtn, ordersBtn];
-        sidebarTriggers.forEach(btn => {
-            if (btn && upgradeBtn) {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    upgradeBtn.click();
-                });
-            }
-        });
-    }
+    const sidebarTriggers = [analyticsBtn, addManagerBtn, customersBtn, ordersBtn];
+    sidebarTriggers.forEach(btn => {
+        if (btn && upgradeBtn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                upgradeBtn.click();
+            });
+        }
+    });
 
     // Close modals on overlay click
     const allModals = [addProductModal, editProductModal, upgradeModal, upgradeBenefitsModal, imageLimitModal];

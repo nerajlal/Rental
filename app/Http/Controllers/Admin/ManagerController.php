@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\AdminBaseController;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class ManagerController extends AdminBaseController
@@ -43,7 +43,7 @@ class ManagerController extends AdminBaseController
         Admin::create([
             'username' => $username,
             'password' => Hash::make($username),
-            'plan' => 0, // Default to free plan
+            'plan' => Auth::guard('admin')->user()->plan,
         ]);
 
         return redirect()->route('admin.managers.create')->with('success', 'Manager added successfully!');

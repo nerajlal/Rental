@@ -21,7 +21,7 @@
             Products
         </a>
 
-        <!-- All these will trigger the same popup -->
+        <!-- Pro Features -->
         <a href="{{ $isProFeatureLocked ? '#' : url('/admin/managers') }}" id="add-manager-btn"
            class="sidebar-link @if($page === 'managers') active @endif flex items-center justify-between px-6 py-3 text-gray-700 hover:bg-gray-100">
             <div class="flex items-center">
@@ -84,28 +84,3 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    @if($isProFeatureLocked)
-    // Select all the links/buttons that should open the popup
-    const popupTriggers = [
-        'upgrade-btn',
-        'add-manager-btn',
-        'customers-btn',
-        'orders-btn',
-        'analytics-btn'
-    ];
-
-    popupTriggers.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Trigger the Upgrade popup
-                document.querySelector('#upgrade-btn').click();
-            });
-        }
-    });
-    @endif
-</script>

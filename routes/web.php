@@ -43,12 +43,15 @@ Route::middleware(['auth.admin'])->prefix('admin')->group(function () {
     Route::get('/products/{product}', [ProductController::class, 'show'])->name('admin.products.show');
     Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
 
-    Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders.index');
-    Route::get('/customers', [AdminController::class, 'customers'])->name('admin.customers.index');
-    Route::get('/analytics', [AdminController::class, 'analytics'])->name('admin.analytics.index');
+    // Pro Features
+    Route::middleware(['check.plan'])->group(function () {
+        Route::get('/managers', [ManagerController::class, 'create'])->name('admin.managers.create');
+        Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders.index');
+        Route::get('/customers', [AdminController::class, 'customers'])->name('admin.customers.index');
+        Route::get('/analytics', [AdminController::class, 'analytics'])->name('admin.analytics.index');
+    });
 
-    // Manager Routes
-    Route::get('/managers', [ManagerController::class, 'create'])->name('admin.managers.create');
+    // This route is not protected by the plan check, as it's the action of adding a manager.
     Route::post('/managers', [ManagerController::class, 'store'])->name('admin.managers.store');
 
     // Settings Routes

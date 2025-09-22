@@ -33,11 +33,6 @@ class AdminController extends AdminBaseController
         return view('admin.customers', ['siteConfig' => $this->getSiteConfig(), 'page' => 'customers']);
     }
 
-    public function analytics()
-    {
-        return view('admin.analytics', ['siteConfig' => $this->getSiteConfig(), 'page' => 'analytics']);
-    }
-
     public function settings()
     {
         return view('admin.settings', ['siteConfig' => $this->getSiteConfig(), 'page' => 'settings']);
